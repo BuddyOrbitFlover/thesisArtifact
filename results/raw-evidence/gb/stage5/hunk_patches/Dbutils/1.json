@@ -1,0 +1,12 @@
+{
+    "num_of_hunks": 1,
+    "0": {
+        "file_name": "src/java/org/apache/commons/dbutils/BeanProcessor.java",
+        "from_line_no": 393,
+        "to_line_no": 393,
+        "replaced_with": "            String columnName = rsmd.getColumnLabel(col);\n            if (null == columnName || 0 == columnName.length()) {\n              columnName = rsmd.getColumnName(col);\n            }\n",
+        "replaced": "            String columnName = rsmd.getColumnName(col);\n",
+        "patch_type": "replace",
+        "next_line_no": 394
+    }
+}

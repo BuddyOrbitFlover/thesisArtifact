@@ -1,0 +1,131 @@
+rank	project	bugs	clone_confidence	clone_url	bug_ids
+1	Commons_suncalc	2	github-exact	https://github.com/shred/commons-suncalc.git	1,2
+2	Config_magic	2	github-exact	https://github.com/brianm/config-magic.git	1,2
+3	Fluo_api	2	github-exact	https://github.com/apache/fluo.git	1,3
+4	Github_release_plugin	2	github-exact	https://github.com/jutzig/github-release-plugin.git	1,2
+5	Iciql	2	github-exact	https://github.com/gitblit/iciql.git	1,2
+6	JacksonDataformatBinary_avro	2	github-exact	https://github.com/FasterXML/jackson-dataformats-binary.git	1,2
+7	JacksonDataformatsText_properties	2	github-exact	https://github.com/FasterXML/jackson-dataformats-text.git	1,2
+8	JacksonDatatypeJoda	2	github-exact	https://github.com/FasterXML/jackson-datatype-joda.git	2,3
+9	JavaClassmate	2	github-exact	https://github.com/FasterXML/java-classmate.git	1,2
+10	Jcabi_matchers	2	github-exact	https://github.com/jcabi/jcabi-matchers.git	1,2
+11	Jfreechart_fse	2	github-exact	https://github.com/jfree/jfreechart-fse.git	1,2
+12	Metrics_opentsdb	2	github-exact	https://github.com/sps/metrics-opentsdb.git	1,2
+13	N5	2	github-exact	https://github.com/saalfeldlab/n5.git	1,2
+14	Rdf4j_rio_api	2	github-exact	https://github.com/eclipse/rdf4j.git	1,2
+15	Rdf4j_rio_jsonld	2	github-exact	https://github.com/eclipse/rdf4j.git	1,2
+16	Rdf4j_rio_rdfjson	2	github-exact	https://github.com/eclipse/rdf4j.git	1,2
+17	Shazamcrest	2	github-exact	https://github.com/shazam/shazamcrest.git	1,2
+18	Snomed_owl_toolkit	2	github-exact	https://github.com/IHTSDO/snomed-owl-toolkit.git	1,2
+19	Sparsebitset	2	github-exact	https://github.com/brettwooldridge/SparseBitSet.git	1,2
+20	Tascalate_concurrent	2	github-exact	https://github.com/vsilaev/tascalate-concurrent.git	1,2
+21	Dbutils	2	apache-map		1,2
+22	Dosgi_common	2	apache-map		1,2
+23	Doxia_module_apt	2	apache-map		1,2
+24	Flume_ngcore	2	apache-map		1,2
+25	Functor	2	apache-map		1,2
+26	Geometry_core	2	apache-map		1,3
+27	Incubator_tamaya_api	2	apache-map		1,2
+28	James_project_core	2	apache-map		1,2
+29	Johnzon_jsonschema	2	apache-map		1,2
+30	Maven2_artifact	2	apache-map		1,2
+31	Maven2_project	2	apache-map		1,2
+32	Mrunit	2	apache-map		1,2
+33	Nifi_mock	2	apache-map		1,2
+34	Numbers_angle	2	apache-map		1,2
+35	Oozie_client	2	apache-map		1,2
+36	Rave_core	2	apache-map		1,2
+37	Sentry_ccommon	2	apache-map		1,2
+38	Storm_client	2	apache-map		1,2
+39	Struts1_core	2	apache-map		1,2
+40	Tika_app	2	apache-map		1,3
+41	Tiles_api	2	apache-map		1,2
+42	Wildfly_naming_client	2	redhat-hunt		1,2
+43	Aws_maven	1	github-exact	https://github.com/spring-attic/aws-maven.git	1
+44	Cli_parser	1	github-exact	https://github.com/spullara/cli-parser.git	1
+45	Confluence_http_authenticator	1	github-exact	https://github.com/chauth/confluence_http_authenticator.git	1
+46	Deft	1	github-exact	https://github.com/rschildmeijer/deft.git	1
+47	Doubleclick_core	1	github-exact	https://github.com/google/openrtb-doubleclick.git	1
+48	Dropwizard_spring	1	github-exact	https://github.com/nhuray/dropwizard-spring.git	1
+49	Hierarchical_clustering_java	1	github-exact	https://github.com/lbehnke/hierarchical-clustering-java.git	1
+50	Hive_funnel_udf	1	github-exact	https://github.com/yahoo/hive-funnel-udf.git	1
+51	Incubator_retired_pirk	1	github-exact	https://github.com/apache/incubator-retired-pirk.git	1
+52	JacksonModuleJsonSchema	1	github-exact	https://github.com/FasterXML/jackson-module-jsonSchema.git	1
+53	Jackson_annotations	1	github-exact	https://github.com/FasterXML/jackson-annotations.git	1
+54	Jackson_datatype_hibernate4	1	github-exact	https://github.com/FasterXML/jackson-datatype-hibernate.git	1
+55	Jcabi_aether	1	github-exact	https://github.com/jcabi/jcabi-aether.git	1
+56	Jcabi_w3c	1	github-exact	https://github.com/jcabi/jcabi-w3c.git	1
+57	Jchronic	1	github-exact	https://github.com/samtingleff/jchronic.git	1
+58	Jfreesvg	1	github-exact	https://github.com/jfree/jfreesvg.git	1
+59	Jmimemagic	1	github-exact	https://github.com/arimus/jmimemagic.git	1
+60	Jnagmp	1	github-exact	https://github.com/square/jna-gmp.git	1
+61	Kafka_graphite	1	github-exact	https://github.com/damienclaveau/kafka-graphite.git	1
+62	Netconf_java	1	github-exact	https://github.com/Juniper/netconf-java.git	1
+63	Rdf4j_query	1	github-exact	https://github.com/eclipse/rdf4j.git	1
+64	Rdf4j_rio_rdfxml	1	github-exact	https://github.com/eclipse/rdf4j.git	1
+65	Rocketmq_mqtt_cs	1	github-exact	https://github.com/apache/rocketmq-mqtt.git	1
+66	Rocketmq_mqtt_ds	1	github-exact	https://github.com/apache/rocketmq-mqtt.git	1
+67	Semux_core	1	github-exact	https://github.com/semuxproject/semux-core.git	3
+68	Simple_excel	1	github-exact	https://github.com/tobyweston/simple-excel.git	1
+69	Slack_java_webhook	1	github-exact	https://github.com/ashwanthkumar/slack-java-webhook.git	1
+70	Spring_context_support	1	github-exact	https://github.com/alibaba/spring-context-support.git	2
+71	Stash_jenkins_postreceive_webhook	1	github-exact	https://github.com/mohamicorp/stash-jenkins-postreceive-webhook.git	1
+72	Subethasmtp	1	github-exact	https://github.com/davidmoten/subethasmtp.git	1
+73	Suffixtree	1	github-exact	https://github.com/abahgat/suffixtree.git	1
+74	Template_benchmark	1	github-exact	https://github.com/mbosecke/template-benchmark.git	1
+75	Tempus_fugit	1	github-exact	https://github.com/tobyweston/tempus-fugit.git	1
+76	Trident_ml	1	github-exact	https://github.com/pmerienne/trident-ml.git	1
+77	Weak_lock_free	1	github-exact	https://github.com/raphw/weak-lock-free.git	1
+78	Cayenne_jgroups	1	apache-map		1
+79	Cayenne_jms	1	apache-map		1
+80	Cayenne_xmpp	1	apache-map		1
+81	Hbase_common	1	apache-map		1
+82	Httpcomponents_core_h2	1	apache-map		1
+83	JXR	1	apache-map		1
+84	Jackrabbit_filevault_vault_core	1	apache-map		1
+85	James_project_mailet_standard	1	apache-map		1
+86	James_project_server_container_core	1	apache-map		1
+87	Jena_core	1	apache-map		2
+88	Johnzon_jaxrs	1	apache-map		1
+89	Karaf_main	1	apache-map		1
+90	Knox_assertion_common	1	apache-map		1
+91	MDeploy	1	apache-map		1
+92	MGpg	1	apache-map		1
+93	Maven_checkstyle_plugin	1	apache-map		1
+94	MetaModel_csv	1	apache-map		1
+95	MetaModel_excel	1	apache-map		1
+96	MetaModel_pojo	1	apache-map		1
+97	MetaModel_salesforce	1	apache-map		1
+98	Minaftp_api	1	apache-map		1
+99	Mshared_archiver	1	apache-map		1
+100	Oak_commons	1	apache-map		1
+101	Ognl	1	apache-map		1
+102	Rat_core	1	apache-map		1
+103	Rat_plugin	1	apache-map		1
+104	Rave_commons	1	apache-map		1
+105	Rave_web	1	apache-map		1
+106	Rdf_jena	1	apache-map		1
+107	Shindig_common	1	apache-map		1
+108	Sling_validation	1	apache-map		1
+109	Tez_common	1	apache-map		1
+110	Tinkerpop_gremlin_core	1	apache-map		1
+111	Twill_dcore	1	apache-map		1
+112	Webbeans_web	1	apache-map		1
+113	Wicket_cdi	1	apache-map		1
+114	Wicket_spring	1	apache-map		1
+115	Xbean_naming	1	apache-map		1
+116	Xbean_reflect	1	apache-map		1
+117	Appformer_uberfire_commons_editor_backend	1	redhat-hunt		1
+118	Appformer_uberfire_security_management_client	1	redhat-hunt		1
+119	Drools_model_compiler	1	redhat-hunt		1
+120	Drools_traits	1	redhat-hunt		1
+121	Jboss_threads	1	redhat-hunt		1
+122	Jbpm_human_task_workitems	1	redhat-hunt		1
+123	Kie_memory_compiler	1	redhat-hunt		1
+124	Kogito_editors_java_kie_wb_common_stunner_widgets	1	redhat-hunt		1
+125	Switchyard_admin	1	redhat-hunt		1
+126	Switchyard_config	1	redhat-hunt		1
+127	Switchyard_validate	1	redhat-hunt		1
+128	Weld_se_core	1	redhat-hunt		1
+129	Jmh_core	1	hunt		1
+130	Podam	1	hunt		1

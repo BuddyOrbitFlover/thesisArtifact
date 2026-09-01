@@ -1,0 +1,12 @@
+{
+    "num_of_hunks": 1,
+    "0": {
+        "file_name": "src/java/org/apache/commons/mail/resolver/DataSourceCompositeResolver.java",
+        "from_line_no": 67,
+        "to_line_no": 67,
+        "replaced_with": "        final DataSourceResolver[] resolvers = new DataSourceResolver[dataSourceResolvers.length];\n        System.arraycopy(dataSourceResolvers, 0, resolvers, 0, dataSourceResolvers.length);\n        return resolvers;\n",
+        "replaced": "        return dataSourceResolvers;\n",
+        "patch_type": "replace",
+        "next_line_no": 68
+    }
+}

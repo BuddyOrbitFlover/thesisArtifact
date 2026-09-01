@@ -1,0 +1,22 @@
+{
+    "patch": [
+        {
+            "file_name": "src/main/java/org/apache/commons/graph/model/BaseMutableGraph.java",
+            "replaced_with": "    protected void internalRemoveEdge( V head, E e, V tail )\n    {\n        final VertexPair<V> vertexPair = new VertexPair<V>( head, tail );\n        getIndexedVertices().remove( e );\n        getIndexedEdges().remove( vertexPair );\n        getAdjacencyList().get( vertexPair.getHead() ).remove( vertexPair.getTail() );\n    }\n",
+            "patch_type": "insert",
+            "next_line_no": 117
+        },
+        {
+            "file_name": "src/main/java/org/apache/commons/graph/model/BaseMutableGraph.java",
+            "replaced_with": "        final VertexPair<V> vertexPair = getVertices( e );\n        checkGraphCondition( vertexPair != null, \"Edge '%s' not present in the Graph\", e );\n",
+            "patch_type": "insert",
+            "next_line_no": 131
+        },
+        {
+            "file_name": "src/main/java/org/apache/commons/graph/model/BaseMutableGraph.java",
+            "replaced_with": "        internalRemoveEdge( vertexPair.getHead(), e, vertexPair.getTail() );\n        getAllEdges().remove( e );\n",
+            "patch_type": "insert",
+            "next_line_no": 133
+        }
+    ]
+}

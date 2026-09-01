@@ -1,0 +1,44 @@
+Checking out 09ed5563 to /root/wkrem_1/D4J/projects/Closure_154............ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 09ed5563:d8624db8..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Closure-154b.................................... OK
+CatenaD4j# Tracing test files.............................................. Finished
+CatenaD4j# Applying test patch............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Buggy program version checked out for Closure-154b1............. Finished
+CatenaD4j# Commit BUGGY version............................................ Finished
+CatenaD4j# Tag BUGGY version............................................... Finished
+CatenaD4j# Initialize BUGGY version........................................ Finished
+CatenaD4j# Tracing src files............................................... Finished
+CatenaD4j# Applying src patch.............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Fixed program version checked out for Closure-154f1............. Finished
+CatenaD4j# Commit FIXED version............................................ Finished
+CatenaD4j# Tag FIXED version............................................... Finished
+CatenaD4j# Initialize FIXED version........................................ Finished
+CatenaD4j# Check out BUGGY version......................................... Finished
+CatenaD4j# Clean files..................................................... Finished
+CatenaD4j# Tasks all done.................................................. Finished
+Reinitialized existing Git repository in /root/wkrem_1/D4J/projects/Closure_154/.git/
+Closure_154_1
+Closure
+154
+1
+write_dir:/root/wkrem_1/D4J/projects/Closure_154
+execute================catena4j checkout -p Closure -v 154b1 -w /root/wkrem_1/D4J/projects/Closure_154
+命令为：cd /root/wkrem_1/D4J/projects/Closure_154 && defects4j compile
+命令为：cd /root/wkrem_1/D4J/projects/Closure_154 && defects4j test
+命令为：cd /root/wkrem_1 && ./NormalFLTBarRunner.sh /root/wkrem_1/D4J/projects/ Closure_154 /root/defects4j/
+Traceback (most recent call last):
+  File "runTBarForCatenaD4J.py", line 130, in <module>
+    patch_output_dirlist = os.listdir(patch_output_root)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/wkrem_1/OUTPUT/NormalFL/TBar'

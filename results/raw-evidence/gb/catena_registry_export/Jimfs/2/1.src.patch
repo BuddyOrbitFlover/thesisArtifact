@@ -1,0 +1,13 @@
+{
+    "patch": [
+        {
+            "file_name": "jimfs/src/main/java/com/google/common/jimfs/Options.java",
+            "from_line_no": 138,
+            "to_line_no": 138,
+            "replaced_with": "    ImmutableSet<OpenOption> result = addWrite(Arrays.asList(options));\n",
+            "replaced": "    ImmutableSet<OpenOption> result = ImmutableSet.copyOf(options);\n",
+            "patch_type": "replace",
+            "next_line_no": 139
+        }
+    ]
+}

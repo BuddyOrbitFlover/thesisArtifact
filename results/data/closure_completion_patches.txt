@@ -1,0 +1,351 @@
+=== Closure_6_2 wall times (expect ~18000s if budget-censored):
+=====Closure_6_2=====18000.087131023407s
+
+########## Closure_141_2
+===== /TBarAPI/RESULTS_rem/fixed/Closure_141_2/Patch_25_11.txt
+diff --git a/src/com/google/javascript/jscomp/NodeUtil.java b/src/com/google/javascript/jscomp/NodeUtil.java
+index 044bdd93..660a8d93 100644
+--- a/src/com/google/javascript/jscomp/NodeUtil.java
++++ b/src/com/google/javascript/jscomp/NodeUtil.java
+@@ -604,7 +604,7 @@ public final class NodeUtil {
+     }
+ 
+     for (Node c = n.getFirstChild(); c != null; c = c.getNext()) {
+-      if (canBeSideEffected(c, knownConstants)) {
++      if (isValidDefineValue(c, knownConstants)) {
+         return true;
+       }
+     }
+
+########## Closure_106_2
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_583_225.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..7d7291c3 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordNoAlias()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_585_227.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..b0d64318 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordInterface()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_588_230.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..f4e2802d 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordImplicitCast()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_15_11.txt
+diff --git a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+index 47dc5af9..1a706063 100644
+--- a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
++++ b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+@@ -249,7 +249,7 @@ public final class JsDocInfoParser {
+ 
+     // If we have a block level comment, record it.
+     if (blockInfo.string.length() > 0) {
+-      jsdocBuilder.recordBlockDescription(blockInfo.string);
++      jsdocBuilder.recordTemplateTypeName(blockInfo.string);
+     }
+ 
+     // Parse the actual JsDoc.
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_20_15.txt
+diff --git a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+index 47dc5af9..976bbbc0 100644
+--- a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
++++ b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+@@ -249,7 +249,7 @@ public final class JsDocInfoParser {
+ 
+     // If we have a block level comment, record it.
+     if (blockInfo.string.length() > 0) {
+-      jsdocBuilder.recordBlockDescription(blockInfo.string);
++      jsdocBuilder.recordDeprecationReason(blockInfo.string);
+     }
+ 
+     // Parse the actual JsDoc.
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_579_221.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..aa9f254c 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordConstructor()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_25_16.txt
+diff --git a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+index 47dc5af9..c70aa85f 100644
+--- a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
++++ b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+@@ -249,7 +249,7 @@ public final class JsDocInfoParser {
+ 
+     // If we have a block level comment, record it.
+     if (blockInfo.string.length() > 0) {
+-      jsdocBuilder.recordBlockDescription(blockInfo.string);
++      jsdocBuilder.recordReturnDescription(blockInfo.string);
+     }
+ 
+     // Parse the actual JsDoc.
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_586_228.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..17de74e9 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordExport()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_576_218.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..a009ffdd 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordConstancy()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_581_223.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..beb38ce1 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordPreserveTry()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_587_229.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..5b1747d9 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordNoShadow()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_30_17.txt
+diff --git a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+index 47dc5af9..794f9849 100644
+--- a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
++++ b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+@@ -249,7 +249,7 @@ public final class JsDocInfoParser {
+ 
+     // If we have a block level comment, record it.
+     if (blockInfo.string.length() > 0) {
+-      jsdocBuilder.recordBlockDescription(blockInfo.string);
++      jsdocBuilder.recordDescription(blockInfo.string);
+     }
+ 
+     // Parse the actual JsDoc.
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_594_235.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..bdfc2e80 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,9 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
+     populated = true;
+-    }
+     return currentInfo.documentBlock(description);
+   }
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_578_220.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..02c16836 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordNoTypeCheck()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_17_12.txt
+diff --git a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+index 47dc5af9..c5cb940d 100644
+--- a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
++++ b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+@@ -249,7 +249,7 @@ public final class JsDocInfoParser {
+ 
+     // If we have a block level comment, record it.
+     if (blockInfo.string.length() > 0) {
+-      jsdocBuilder.recordBlockDescription(blockInfo.string);
++      jsdocBuilder.addAuthor(blockInfo.string);
+     }
+ 
+     // Parse the actual JsDoc.
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_582_224.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..7f5e73e1 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordOverride()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_570_212.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..abef34ae 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -113,7 +113,8 @@ final public class JSDocInfoBuilder {
+       currentInfo = new JSDocInfo(this.parseDocumentation);
+       return built;
+     } else {
+-      return null;
++      return this.currentInfo;
++
+     }
+   }
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_18_13.txt
+diff --git a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+index 47dc5af9..7a25d4df 100644
+--- a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
++++ b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+@@ -249,7 +249,7 @@ public final class JsDocInfoParser {
+ 
+     // If we have a block level comment, record it.
+     if (blockInfo.string.length() > 0) {
+-      jsdocBuilder.recordBlockDescription(blockInfo.string);
++      jsdocBuilder.addReference(blockInfo.string);
+     }
+ 
+     // Parse the actual JsDoc.
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_19_14.txt
+diff --git a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+index 47dc5af9..dc454209 100644
+--- a/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
++++ b/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+@@ -249,7 +249,7 @@ public final class JsDocInfoParser {
+ 
+     // If we have a block level comment, record it.
+     if (blockInfo.string.length() > 0) {
+-      jsdocBuilder.recordBlockDescription(blockInfo.string);
++      jsdocBuilder.recordVersion(blockInfo.string);
+     }
+ 
+     // Parse the actual JsDoc.
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_589_231.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..d4d438df 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordNoSideEffects()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_584_226.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..dd065718 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordDeprecated()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+===== /TBarAPI/RESULTS_rem/fixed/Closure_106_2/Patch_577_219.txt
+diff --git a/src/com/google/javascript/rhino/JSDocInfoBuilder.java b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+index 1311638f..abe227e2 100644
+--- a/src/com/google/javascript/rhino/JSDocInfoBuilder.java
++++ b/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+@@ -186,7 +186,7 @@ final public class JSDocInfoBuilder {
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
++    if (recordHiddenness()) {
+     populated = true;
+     }
+     return currentInfo.documentBlock(description);
+
+########## Closure_138_1
+===== /TBarAPI/RESULTS_rem/fixed/Closure_138_1/Patch_89_24.txt
+diff --git a/src/com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java b/src/com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java
+index 720b60b7..dc9dd746 100644
+--- a/src/com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java
++++ b/src/com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java
+@@ -205,7 +205,6 @@ class ClosureReverseAbstractInterpreter
+       Node param = condition.getLastChild();
+       if (callee.getType() == GETPROP && param.isQualifiedName()) {
+         JSType paramType =  getTypeIfRefinable(param, blindScope);
+-        if (paramType != null) {
+         Node left = callee.getFirstChild();
+         Node right = callee.getLastChild();
+         if (left.getType() == NAME && "goog".equals(left.getString()) &&
+@@ -217,7 +216,6 @@ class ClosureReverseAbstractInterpreter
+                 outcome);
+             }
+           }
+-        }
+       }
+     }
+     return nextPreciserScopeKnowingConditionOutcome(

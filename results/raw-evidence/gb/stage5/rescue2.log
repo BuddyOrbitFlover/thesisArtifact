@@ -1,0 +1,157 @@
+=== RESCUE2 START Sat Jul  4 03:26:41 PDT 2026 ===
+--- clean isolated re-run: Text_5 ---
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [15:33<00:00, 933.88s/it]100%|██████████| 1/1 [15:33<00:00, 933.88s/it]
+---
+Begin generate bug_id: Text_5
+num_of_hunks: 4
+timeout for running: 3600
+use working dir: ./working/data/Text_5
+Try to checkout Text_5
+build dir: ['target/classes', 'target/test-classes']
+init FileManager
+trace file: src/main/java/org/apache/commons/text/ExtendedMessageFormat.java
+trying to replace old failing tests
+edit: replace from 107 range 7 at src/test/java/org/apache/commons/text/ExtendedMessageFormatTest.java
+trace file: src/test/java/org/apache/commons/text/ExtendedMessageFormatTest.java
+new test num: 2
+ori test num: 0
+pattern: 0000
+patches are written to file
+running tests...
+used time: Finished in 8.11 seconds
+Failing tests: 2
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_0
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_1
+processed: 0000
+pattern: 0001
+try to fix hunk: 3
+insert before 429 with                 next(pos);
+
+patches are written to file
+running tests...
+used time: Finished in 7.98 seconds
+Failing tests: 5
+	org.apache.commons.text.ExtendedMessageFormatTest::testEqualsHashcode
+	org.apache.commons.text.ExtendedMessageFormatTest::testEscapedQuote_LANG_477
+	org.apache.commons.text.ExtendedMessageFormatTest::testEmbeddedPatternInChoice
+	org.apache.commons.text.ExtendedMessageFormatTest::testExtendedFormats
+	org.apache.commons.text.ExtendedMessageFormatTest::testExtendedAndBuiltInFormats
+Includes new failing tests, set to unusable
+processed: 0001
+pattern: 0010
+try to fix hunk: 2
+insert before 424 with                 next(pos);
+
+patches are written to file
+running tests...
+used time: Finished in 7.96 seconds
+Failing tests: 3
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_0
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_1
+	org.apache.commons.text.ExtendedMessageFormatTest::testEmbeddedPatternInChoice
+Includes new failing tests, set to unusable
+processed: 0010
+pattern: 0100
+try to fix hunk: 1
+insert before 418 with                 next(pos);
+
+patches are written to file
+running tests...
+used time: Finished in 7.91 seconds
+Failing tests: 2
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_0
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_1
+No new failing tests but only 1 hunk
+processed: 0100
+pattern: 1000
+try to fix hunk: 0
+replace from 414 with range 1 to
+        while (pos.getIndex() < pattern.length()) {
+
+patches are written to file
+running tests...
+EXCEPTION: tests time out
+EXCEPTION: Inside Exception tests time out
+Traceback (most recent call last):
+  File "run.py", line 41, in task
+    generator.run()
+  File "/catena/scripts/generate_bugs/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/catena/scripts/generate_bugs/runner.py", line 85, in run
+    self._run()
+  File "/catena/scripts/generate_bugs/runner.py", line 111, in _run
+    self.taskSingleHunk(task)
+  File "/catena/scripts/generate_bugs/runner.py", line 154, in taskSingleHunk
+    raise TimeoutError("tests time out")
+TimeoutError: tests time out
+
+Real time: 933.8847839832306s
+--- clean isolated re-run: Graph_4 ---
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [15:12<00:00, 912.67s/it]100%|██████████| 1/1 [15:12<00:00, 912.67s/it]
+---
+Begin generate bug_id: Graph_4
+num_of_hunks: 2
+timeout for running: 3600
+use working dir: ./working/data/Graph_4
+Try to checkout Graph_4
+build dir: ['target/classes', 'target/test-classes']
+init FileManager
+trace file: src/main/java/org/apache/commons/graph/visit/DefaultVisitAlgorithmsSelector.java
+trying to replace old failing tests
+new test num: 0
+ori test num: 1
+pattern: 00
+patches are written to file
+running tests...
+used time: Finished in 7.72 seconds
+Failing tests: 1
+	org.apache.commons.graph.visit.VisitTestCase::verifyBreadthFirstSearch
+processed: 00
+pattern: 01
+try to fix hunk: 1
+insert before 160 with                         visitedVertices.add( w );
+
+patches are written to file
+running tests...
+seems testing failed, see output:
+<OUTPUT>
+<Common Compile Failed>
+<ENDOUTPUT>
+processed: 01
+pattern: 10
+try to fix hunk: 0
+delete from 141 with range 4
+patches are written to file
+running tests...
+EXCEPTION: tests time out
+EXCEPTION: Inside Exception tests time out
+Traceback (most recent call last):
+  File "run.py", line 41, in task
+    generator.run()
+  File "/catena/scripts/generate_bugs/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/catena/scripts/generate_bugs/runner.py", line 85, in run
+    self._run()
+  File "/catena/scripts/generate_bugs/runner.py", line 111, in _run
+    self.taskSingleHunk(task)
+  File "/catena/scripts/generate_bugs/runner.py", line 154, in taskSingleHunk
+    raise TimeoutError("tests time out")
+TimeoutError: tests time out
+
+Real time: 912.6749994754791s
+=== RESCUE2 DONE Sat Jul  4 03:57:33 PDT 2026 ===
+bug                        verdict        note        nh  pats
+Ognl_1                     divisible                   2     1
+Jackson_annotations_1      divisible                   2     1
+Jfreesvg_1                 divisible                   4     1
+Dbutils_2                  indivisible                 2     0
+Jimfs_2                    divisible                   2     1
+Email_4                    divisible                   2     1
+Email_5                    unknown        exception 
+Text_1                     divisible                   2     1
+Text_2                     divisible                   3     2
+Text_5                     unknown        exception 
+Graph_1                    unknown        exception 
+Graph_3                    divisible                   7     2
+Graph_4                    unknown        exception 
+Bcel_2                     divisible                   3     2

@@ -1,0 +1,2 @@
+org.apache.commons.graph.model.BaseMutableGraphTestCase::testUndirectedGraphRemoveEdgeNotExists
+org.apache.commons.graph.model.BaseMutableGraphTestCase::testDirectedGraphRemoveEdgeNotExists

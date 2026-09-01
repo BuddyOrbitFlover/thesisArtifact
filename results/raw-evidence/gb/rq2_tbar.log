@@ -1,0 +1,47 @@
+=== RQ2 TBAR START Mon Jul  6 07:51:59 PDT 2026 ===
+Text_2_2: done, skip
+--- Jfreesvg_1_1 start Mon Jul  6 07:51:59 PDT 2026 ---
+Checking out 74ced3ef to /catena/tbar/D4J/projects/Jfreesvg_1.............. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 74ced3ef:f4751008..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Jfreesvg-1b..................................... OK
+CatenaD4j# Tracing test files.............................................. Finished
+CatenaD4j# Applying test patch............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Buggy program version checked out for Jfreesvg-1b1.............. Finished
+CatenaD4j# Commit BUGGY version............................................ Finished
+CatenaD4j# Tag BUGGY version............................................... Finished
+CatenaD4j# Initialize BUGGY version........................................ Finished
+CatenaD4j# Tracing src files............................................... Finished
+CatenaD4j# Applying src patch.............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Fixed program version checked out for Jfreesvg-1f1.............. Finished
+CatenaD4j# Commit FIXED version............................................ Finished
+CatenaD4j# Tag FIXED version............................................... Finished
+CatenaD4j# Initialize FIXED version........................................ Finished
+CatenaD4j# Check out BUGGY version......................................... Finished
+CatenaD4j# Clean files..................................................... Finished
+CatenaD4j# Tasks all done.................................................. Finished
+Reinitialized existing Git repository in /catena/tbar/D4J/projects/Jfreesvg_1/.git/
+Jfreesvg_1_1
+Jfreesvg
+1
+1
+write_dir:/catena/tbar/D4J/projects/Jfreesvg_1
+execute================catena4j checkout -p Jfreesvg -v 1b1 -w /catena/tbar/D4J/projects/Jfreesvg_1
+命令为：cd /catena/tbar/D4J/projects/Jfreesvg_1 && defects4j compile
+命令为：cd /catena/tbar/D4J/projects/Jfreesvg_1 && defects4j test
+命令为：cd /catena/tbar && ./NormalFLTBarRunner.sh /catena/tbar/D4J/projects/ Jfreesvg_1 /gb/
+--- Jfreesvg_1_1 end Mon Jul  6 08:59:52 PDT 2026 fixed_dirs=4 ---
+Graph_3_2: done, skip
+Bcel_2_1: done, skip
+Bcel_2_2: done, skip
+=== RQ2 TBAR DONE Mon Jul  6 08:59:55 PDT 2026 ===

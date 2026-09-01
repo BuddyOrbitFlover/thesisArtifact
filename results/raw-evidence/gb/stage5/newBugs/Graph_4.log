@@ -1,0 +1,50 @@
+---
+Begin generate bug_id: Graph_4
+num_of_hunks: 2
+timeout for running: 3600
+use working dir: ./working/data/Graph_4
+Try to checkout Graph_4
+build dir: ['target/classes', 'target/test-classes']
+init FileManager
+trace file: src/main/java/org/apache/commons/graph/visit/DefaultVisitAlgorithmsSelector.java
+trying to replace old failing tests
+new test num: 0
+ori test num: 1
+pattern: 00
+patches are written to file
+running tests...
+used time: Finished in 7.72 seconds
+Failing tests: 1
+	org.apache.commons.graph.visit.VisitTestCase::verifyBreadthFirstSearch
+processed: 00
+pattern: 01
+try to fix hunk: 1
+insert before 160 with                         visitedVertices.add( w );
+
+patches are written to file
+running tests...
+seems testing failed, see output:
+<OUTPUT>
+<Common Compile Failed>
+<ENDOUTPUT>
+processed: 01
+pattern: 10
+try to fix hunk: 0
+delete from 141 with range 4
+patches are written to file
+running tests...
+EXCEPTION: tests time out
+EXCEPTION: Inside Exception tests time out
+Traceback (most recent call last):
+  File "run.py", line 41, in task
+    generator.run()
+  File "/catena/scripts/generate_bugs/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/catena/scripts/generate_bugs/runner.py", line 85, in run
+    self._run()
+  File "/catena/scripts/generate_bugs/runner.py", line 111, in _run
+    self.taskSingleHunk(task)
+  File "/catena/scripts/generate_bugs/runner.py", line 154, in taskSingleHunk
+    raise TimeoutError("tests time out")
+TimeoutError: tests time out
+

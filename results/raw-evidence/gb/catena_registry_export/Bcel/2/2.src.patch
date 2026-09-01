@@ -1,0 +1,16 @@
+{
+    "patch": [
+        {
+            "file_name": "src/main/java/org/apache/bcel/generic/LocalVariableGen.java",
+            "replaced_with": "    void dispose() {\n        setStart(null);\n        setEnd(null);\n    }\n",
+            "patch_type": "insert",
+            "next_line_no": 169
+        },
+        {
+            "file_name": "src/main/java/org/apache/bcel/generic/MethodGen.java",
+            "replaced_with": "        l.dispose();\n",
+            "patch_type": "insert",
+            "next_line_no": 338
+        }
+    ]
+}

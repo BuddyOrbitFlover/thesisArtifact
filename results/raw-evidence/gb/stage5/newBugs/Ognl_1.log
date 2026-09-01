@@ -1,0 +1,76 @@
+---
+Begin generate bug_id: Ognl_1
+num_of_hunks: 2
+timeout for running: 3600
+use working dir: ./working/data/Ognl_1
+Try to checkout Ognl_1
+build dir: ['target/classes', 'target/test-classes']
+init FileManager
+trace file: src/main/java/org/apache/commons/ognl/OgnlRuntime.java
+trying to replace old failing tests
+NOTICE: skip org.apache.commons.ognl.test.CollectionDirectPropertyTest::runTest[3] for cannot find node in method_base
+new test num: 0
+ori test num: 1
+pattern: 00
+patches are written to file
+running tests...
+used time: Finished in 18.56 seconds
+Failing tests: 1
+	org.apache.commons.ognl.test.CollectionDirectPropertyTest::runTest[3]
+processed: 00
+pattern: 01
+try to fix hunk: 1
+replace from 2747 with range 1 to
+                        if ( methods[i].getName().equals( name ) )
+                        {
+                            return methods[i].getMethod();
+                        }
+                        else if ( ( m != null
+                                && m.getParameterTypes().length > methods[i].getMethod().getParameterTypes().length )
+
+patches are written to file
+running tests...
+used time: Finished in 19.48 seconds
+Failing tests: 0
+select new bug
+Pattern: 01
+new failing tests:
+org.apache.commons.ognl.test.CollectionDirectPropertyTest::runTest[3]
+Save found bug
+processed: 01
+pattern: 10
+try to fix hunk: 0
+replace from 2739 with range 2 to
+                    || methods[i].getName().toLowerCase().equals( "has" + name )
+                    || methods[i].getName().toLowerCase().equals( "is" + name ) )
+
+patches are written to file
+running tests...
+used time: Finished in 19.94 seconds
+Failing tests: 1
+	org.apache.commons.ognl.test.CollectionDirectPropertyTest::runTest[3]
+No new failing tests but only 1 hunk
+processed: 10
+pattern: 11
+try to fix hunk: 0
+replace from 2739 with range 2 to
+                    || methods[i].getName().toLowerCase().equals( "has" + name )
+                    || methods[i].getName().toLowerCase().equals( "is" + name ) )
+
+try to fix hunk: 1
+replace from 2747 with range 1 to
+                        if ( methods[i].getName().equals( name ) )
+                        {
+                            return methods[i].getMethod();
+                        }
+                        else if ( ( m != null
+                                && m.getParameterTypes().length > methods[i].getMethod().getParameterTypes().length )
+
+patches are written to file
+running tests...
+used time: Finished in 20.96 seconds
+Failing tests: 0
+Can independently fix []
+Could not fix independently
+processed: 11
+Find 1 new bugs

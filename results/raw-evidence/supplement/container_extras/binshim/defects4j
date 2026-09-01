@@ -1,0 +1,14 @@
+#!/bin/bash
+/gb/framework/bin/defects4j "$@"
+rc=$?
+if [ "$1" = "checkout" ]; then
+  w=""; p=""; args=("$@")
+  for ((j=1;j<${#args[@]};j++)); do
+    [ "${args[$j]}" = "-w" ] && w="${args[$((j+1))]}"
+    [ "${args[$j]}" = "-p" ] && p="${args[$((j+1))]}"
+  done
+  if [ "$p" = "Jimfs" ] && [ -n "$w" ] && [ -d "$w/jimfs/src" ] && [ ! -e "$w/src" ]; then
+    ln -s jimfs/src "$w/src"
+  fi
+fi
+exit $rc

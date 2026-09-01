@@ -1,0 +1,36 @@
+bug                        verdict        note        nh  pats
+Cli_parser_1               divisible                   3     1
+Commons_suncalc_1          divisible      +exc        22     1
+Commons_suncalc_2          divisible                   5     1
+Config_magic_2             divisible      +exc        16     2
+Deft_1                     divisible                   3     1
+Dropwizard_spring_1        indivisible    +exc         2     1
+Hierarchical_clustering_java_1 indivisible                 2     1
+Hive_funnel_udf_1          divisible                   8     1
+Iciql_1                    indivisible                 2     1
+Iciql_2                    divisible                   7     1
+Incubator_retired_pirk_1   indivisible                 2     1
+JacksonDatatypeJoda_2      divisible                   7     2
+JacksonDatatypeJoda_3      divisible                   2     1
+JacksonModuleJsonSchema_1  divisible      +exc         4     1
+Jackson_annotations_1      divisible                   2     1
+JavaClassmate_2            divisible                   2     1
+Jcabi_aether_1             divisible                   9     2
+Jcabi_matchers_1           divisible                   3     1
+Jcabi_w3c_1                divisible                   2     2
+Jchronic_1                 divisible                   6     2
+Jfreechart_fse_2           divisible                   2     1
+Jfreesvg_1                 divisible                   4     1
+Jmimemagic_1               indivisible                 6     0
+N5_2                       indivisible                 3     1
+Netconf_java_1             divisible      +exc        12     1
+Semux_core_3               divisible      +exc         8     1
+Shazamcrest_1              unknown        exception 
+Shazamcrest_2              indivisible                 3     1
+Simple_excel_1             divisible                   2     1
+Sparsebitset_1             unknown        exception 
+Sparsebitset_2             divisible      +exc        15     1
+Spring_context_support_2   divisible      +exc        11     1
+Tascalate_concurrent_1     divisible                   3     1
+Tascalate_concurrent_2     divisible                   3     1
+Trident_ml_1               divisible                   3     3

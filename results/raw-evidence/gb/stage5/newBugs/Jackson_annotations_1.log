@@ -1,0 +1,135 @@
+---
+Begin generate bug_id: Jackson_annotations_1
+num_of_hunks: 2
+timeout for running: 3600
+use working dir: ./working/data/Jackson_annotations_1
+Try to checkout Jackson_annotations_1
+build dir: ['target/classes', 'target/test-classes']
+init FileManager
+trace file: src/main/java/com/fasterxml/jackson/annotation/JsonInclude.java
+trying to replace old failing tests
+edit: replace from 68 range 18 at src/test/java/com/fasterxml/jackson/annotation/IncludeTest.java
+to
+    public void testContentMerge76$catena_0()
+    {
+        JsonInclude.Value v1 = JsonInclude.Value.empty()
+                .withContentInclusion(JsonInclude.Include.ALWAYS)
+                .withValueInclusion(JsonInclude.Include.NON_ABSENT);
+        JsonInclude.Value v2 = JsonInclude.Value.empty()
+                .withContentInclusion(JsonInclude.Include.NON_EMPTY)
+                .withValueInclusion(JsonInclude.Include.USE_DEFAULTS);
+
+        JsonInclude.Value v12 = v2.withOverrides(v1); // v1 priority
+        JsonInclude.Value v21 = v1.withOverrides(v2); // v2 priority
+
+        assertEquals(JsonInclude.Include.ALWAYS, v12.getContentInclusion());                                /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertEquals(JsonInclude.Include.NON_ABSENT, v12.getValueInclusion());                         }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        try{ assertEquals(JsonInclude.Include.NON_EMPTY, v21.getContentInclusion());                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertEquals(JsonInclude.Include.NON_ABSENT, v21.getValueInclusion());                         }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testContentMerge76$catena_1()
+    {
+        JsonInclude.Value v1 = JsonInclude.Value.empty()
+                .withContentInclusion(JsonInclude.Include.ALWAYS)
+                .withValueInclusion(JsonInclude.Include.NON_ABSENT);
+        JsonInclude.Value v2 = JsonInclude.Value.empty()
+                .withContentInclusion(JsonInclude.Include.NON_EMPTY)
+                .withValueInclusion(JsonInclude.Include.USE_DEFAULTS);
+
+        JsonInclude.Value v12 = v2.withOverrides(v1); // v1 priority
+        JsonInclude.Value v21 = v1.withOverrides(v2); // v2 priority
+
+        try{ assertEquals(JsonInclude.Include.ALWAYS, v12.getContentInclusion());                           }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertEquals(JsonInclude.Include.NON_ABSENT, v12.getValueInclusion());                              /***** ORIGINAL ASSERTION IS HERE *****/
+
+        try{ assertEquals(JsonInclude.Include.NON_EMPTY, v21.getContentInclusion());                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertEquals(JsonInclude.Include.NON_ABSENT, v21.getValueInclusion());                         }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testContentMerge76$catena_2()
+    {
+        JsonInclude.Value v1 = JsonInclude.Value.empty()
+                .withContentInclusion(JsonInclude.Include.ALWAYS)
+                .withValueInclusion(JsonInclude.Include.NON_ABSENT);
+        JsonInclude.Value v2 = JsonInclude.Value.empty()
+                .withContentInclusion(JsonInclude.Include.NON_EMPTY)
+                .withValueInclusion(JsonInclude.Include.USE_DEFAULTS);
+
+        JsonInclude.Value v12 = v2.withOverrides(v1); // v1 priority
+        JsonInclude.Value v21 = v1.withOverrides(v2); // v2 priority
+
+        try{ assertEquals(JsonInclude.Include.ALWAYS, v12.getContentInclusion());                           }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertEquals(JsonInclude.Include.NON_ABSENT, v12.getValueInclusion());                         }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        assertEquals(JsonInclude.Include.NON_EMPTY, v21.getContentInclusion());                             /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertEquals(JsonInclude.Include.NON_ABSENT, v21.getValueInclusion());                         }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testContentMerge76$catena_3()
+    {
+        JsonInclude.Value v1 = JsonInclude.Value.empty()
+                .withContentInclusion(JsonInclude.Include.ALWAYS)
+                .withValueInclusion(JsonInclude.Include.NON_ABSENT);
+        JsonInclude.Value v2 = JsonInclude.Value.empty()
+                .withContentInclusion(JsonInclude.Include.NON_EMPTY)
+                .withValueInclusion(JsonInclude.Include.USE_DEFAULTS);
+
+        JsonInclude.Value v12 = v2.withOverrides(v1); // v1 priority
+        JsonInclude.Value v21 = v1.withOverrides(v2); // v2 priority
+
+        try{ assertEquals(JsonInclude.Include.ALWAYS, v12.getContentInclusion());                           }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertEquals(JsonInclude.Include.NON_ABSENT, v12.getValueInclusion());                         }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        try{ assertEquals(JsonInclude.Include.NON_EMPTY, v21.getContentInclusion());                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertEquals(JsonInclude.Include.NON_ABSENT, v21.getValueInclusion());                              /***** ORIGINAL ASSERTION IS HERE *****/
+    }
+trace file: src/test/java/com/fasterxml/jackson/annotation/IncludeTest.java
+new test num: 4
+ori test num: 0
+pattern: 00
+patches are written to file
+running tests...
+used time: Finished in 5.98 seconds
+Failing tests: 1
+	com.fasterxml.jackson.annotation.IncludeTest::testContentMerge76$catena_2
+processed: 00
+pattern: 01
+try to fix hunk: 1
+insert before 253 with             } else if (ciDiff) {
+                return new Value(_valueInclusion, ci);
+
+patches are written to file
+running tests...
+used time: Finished in 5.85 seconds
+Failing tests: 0
+select new bug
+Pattern: 01
+new failing tests:
+com.fasterxml.jackson.annotation.IncludeTest::testContentMerge76$catena_2
+Save found bug
+processed: 01
+pattern: 10
+try to fix hunk: 0
+replace from 246 with range 1 to
+            boolean ciDiff = (ci != _contentInclusion) && (ci != Include.USE_DEFAULTS);
+
+patches are written to file
+running tests...
+used time: Finished in 6.00 seconds
+Failing tests: 1
+	com.fasterxml.jackson.annotation.IncludeTest::testContentMerge76$catena_2
+No new failing tests but only 1 hunk
+processed: 10
+pattern: 11
+try to fix hunk: 0
+replace from 246 with range 1 to
+            boolean ciDiff = (ci != _contentInclusion) && (ci != Include.USE_DEFAULTS);
+
+try to fix hunk: 1
+insert before 253 with             } else if (ciDiff) {
+                return new Value(_valueInclusion, ci);
+
+patches are written to file
+running tests...
+used time: Finished in 5.96 seconds
+Failing tests: 0
+Can independently fix []
+Could not fix independently
+processed: 11
+Find 1 new bugs

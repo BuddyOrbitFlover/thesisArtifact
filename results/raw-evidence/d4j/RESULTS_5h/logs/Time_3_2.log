@@ -1,0 +1,46 @@
+Checking out 8d109fe1 to /root/wk5_3/D4J/projects/Time_3................... OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 8d109fe1:3ba9ba79..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Time-3b......................................... OK
+CatenaD4j# Tracing test files.............................................. Finished
+CatenaD4j# Applying test patch............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Buggy program version checked out for Time-3b2.................. Finished
+CatenaD4j# Commit BUGGY version............................................ Finished
+CatenaD4j# Tag BUGGY version............................................... Finished
+CatenaD4j# Initialize BUGGY version........................................ Finished
+CatenaD4j# Tracing src files............................................... Finished
+CatenaD4j# Applying src patch.............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Fixed program version checked out for Time-3f2.................. Finished
+CatenaD4j# Commit FIXED version............................................ Finished
+CatenaD4j# Tag FIXED version............................................... Finished
+CatenaD4j# Initialize FIXED version........................................ Finished
+CatenaD4j# Check out BUGGY version......................................... Finished
+CatenaD4j# Clean files..................................................... Finished
+CatenaD4j# Tasks all done.................................................. Finished
+Reinitialized existing Git repository in /root/wk5_3/D4J/projects/Time_3/.git/
+Time_3_2
+Time
+3
+2
+write_dir:/root/wk5_3/D4J/projects/Time_3
+execute================catena4j checkout -p Time -v 3b2 -w /root/wk5_3/D4J/projects/Time_3
+命令为：cd /root/wk5_3/D4J/projects/Time_3 && defects4j compile
+命令为：cd /root/wk5_3/D4J/projects/Time_3 && defects4j test
+命令为：cd /root/wk5_3 && ./NormalFLTBarRunner.sh /root/wk5_3/D4J/projects/ Time_3 /root/defects4j/
+Traceback (most recent call last):
+  File "runTBarForCatenaD4J.py", line 130, in <module>
+    patch_output_dirlist = os.listdir(patch_output_root)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/wk5_3/OUTPUT/NormalFL/TBar'

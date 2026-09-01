@@ -1,0 +1,77 @@
+diff --git a/failing_tests b/failing_tests
+index 23c726fc0..e69de29bb 100644
+--- a/failing_tests
++++ b/failing_tests
+@@ -1,48 +0,0 @@
+---- org.apache.commons.math3.optimization.direct.CMAESOptimizerTest::testFitAccuracyDependsOnBoundary$catena_1
+-junit.framework.AssertionFailedError: expected:<11.099999999966222> but was:<1.0>
+-	at org.junit.Assert.fail(Assert.java:88)
+-	at org.junit.Assert.failNotEquals(Assert.java:743)
+-	at org.junit.Assert.assertEquals(Assert.java:494)
+-	at org.junit.Assert.assertEquals(Assert.java:592)
+-	at org.apache.commons.math3.optimization.direct.CMAESOptimizerTest.testFitAccuracyDependsOnBoundary$catena_1(CMAESOptimizerTest.java:477)
+-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+-	at java.lang.reflect.Method.invoke(Method.java:498)
+-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+-	at org.apache.commons.math3.RetryRunner$1.evaluate(RetryRunner.java:60)
+-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeInVM(JUnitTask.java:1484)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.execute(JUnitTask.java:872)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeOrQueue(JUnitTask.java:1972)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.execute1(JUnitTask.java:824)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.execute(JUnitTask.java:2277)
+-	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+-	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+-	at java.lang.reflect.Method.invoke(Method.java:498)
+-	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+-	at org.apache.tools.ant.Task.perform(Task.java:348)
+-	at org.apache.tools.ant.Target.execute(Target.java:392)
+-	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+-	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+-	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+-	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+-	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+-	at org.apache.tools.ant.Main.runBuild(Main.java:811)
+-	at org.apache.tools.ant.Main.startAnt(Main.java:217)
+-	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:280)
+-	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:109)
+diff --git a/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java b/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java
+index bc754a592..1e5872430 100644
+--- a/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java
++++ b/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java
+@@ -250,9 +250,7 @@ public class CMAESOptimizer
+      * @param lambda Population size.
+      */
+     public CMAESOptimizer(int lambda) {
+-        this(lambda, null, DEFAULT_MAXITERATIONS, DEFAULT_STOPFITNESS,
+-             DEFAULT_ISACTIVECMA, DEFAULT_DIAGONALONLY,
+-             DEFAULT_CHECKFEASABLECOUNT, DEFAULT_RANDOMGENERATOR, false);
++        updateBD(DEFAULT_STOPFITNESS);
+     }
+ 
+     /**
+diff --git a/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer$DoubleIndex.class b/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer$DoubleIndex.class
+index a5655730f..36ab8375f 100644
+Binary files a/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer$DoubleIndex.class and b/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer$DoubleIndex.class differ
+diff --git a/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer$FitnessFunction.class b/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer$FitnessFunction.class
+index e70ad8d4d..34a9c320d 100644
+Binary files a/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer$FitnessFunction.class and b/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer$FitnessFunction.class differ
+diff --git a/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer.class b/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer.class
+index 8dd0a1b1b..6845a54d4 100644
+Binary files a/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer.class and b/target/classes/org/apache/commons/math3/optimization/direct/CMAESOptimizer.class differ

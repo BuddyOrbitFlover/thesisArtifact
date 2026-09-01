@@ -1,0 +1,5 @@
+Failing tests: 4
+  - org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_5
+  - org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_6
+  - org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_7
+  - org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_8

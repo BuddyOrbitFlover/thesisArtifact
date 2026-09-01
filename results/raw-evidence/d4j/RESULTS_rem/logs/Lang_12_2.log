@@ -1,0 +1,41 @@
+Useless use of a variable in void context at /root/defects4j/framework/core/Project/Lang.pm line 92.
+Checking out c9d786a4 to /root/wkrem_1/D4J/projects/Lang_12................ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff c9d786a4:9351ed93..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-12b........................................ OK
+CatenaD4j# Tracing test files.............................................. Finished
+CatenaD4j# Applying test patch............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Buggy program version checked out for Lang-12b2................. Finished
+CatenaD4j# Commit BUGGY version............................................ Finished
+CatenaD4j# Tag BUGGY version............................................... Finished
+CatenaD4j# Initialize BUGGY version........................................ Finished
+CatenaD4j# Tracing src files............................................... Finished
+CatenaD4j# Applying src patch.............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Fixed program version checked out for Lang-12f2................. Finished
+CatenaD4j# Commit FIXED version............................................ Finished
+CatenaD4j# Tag FIXED version............................................... Finished
+CatenaD4j# Initialize FIXED version........................................ Finished
+CatenaD4j# Check out BUGGY version......................................... Finished
+CatenaD4j# Clean files..................................................... Finished
+CatenaD4j# Tasks all done.................................................. Finished
+Reinitialized existing Git repository in /root/wkrem_1/D4J/projects/Lang_12/.git/
+Lang_12_2
+Lang
+12
+2
+write_dir:/root/wkrem_1/D4J/projects/Lang_12
+execute================catena4j checkout -p Lang -v 12b2 -w /root/wkrem_1/D4J/projects/Lang_12
+命令为：cd /root/wkrem_1/D4J/projects/Lang_12 && defects4j compile
+命令为：cd /root/wkrem_1/D4J/projects/Lang_12 && defects4j test
+命令为：cd /root/wkrem_1 && ./NormalFLTBarRunner.sh /root/wkrem_1/D4J/projects/ Lang_12 /root/defects4j/

@@ -1,0 +1,3 @@
+Failing tests: 2
+  - org.apache.commons.graph.model.BaseMutableGraphTestCase::testUndirectedGraphRemoveEdge
+  - org.apache.commons.graph.model.BaseMutableGraphTestCase::testDirectedGraphRemoveEdge

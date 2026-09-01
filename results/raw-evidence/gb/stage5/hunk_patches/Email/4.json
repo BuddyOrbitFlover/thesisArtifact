@@ -1,0 +1,21 @@
+{
+    "num_of_hunks": 2,
+    "0": {
+        "file_name": "src/main/java/org/apache/commons/mail/Email.java",
+        "from_line_no": 1174,
+        "to_line_no": 1175,
+        "replaced_with": "            this.headers.put(entry.getKey(), entry.getValue());\n",
+        "replaced": "            String name = entry.getKey();\n            this.headers.put(name, createFoldedHeaderValue(name, entry.getValue()));\n",
+        "patch_type": "replace",
+        "next_line_no": 1176
+    },
+    "1": {
+        "file_name": "src/main/java/org/apache/commons/mail/Email.java",
+        "from_line_no": 1198,
+        "to_line_no": 1198,
+        "replaced_with": "        this.headers.put(name, value);\n",
+        "replaced": "        this.headers.put(name, createFoldedHeaderValue(name, value));\n",
+        "patch_type": "replace",
+        "next_line_no": 1199
+    }
+}

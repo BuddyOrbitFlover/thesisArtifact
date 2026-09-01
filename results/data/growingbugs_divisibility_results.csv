@@ -1,0 +1,15 @@
+bug,project,hunks,verdict,termination,proper_subpatterns,notes
+Ognl_1,commons-ognl,2,divisible,enumeration_complete,1,
+Jackson_annotations_1,jackson-annotations,2,divisible,enumeration_complete,1,
+Jfreesvg_1,jfreesvg,4,divisible,enumeration_complete,1,
+Dbutils_2,commons-dbutils,2,indivisible,enumeration_complete,0,import removal + superclass change — atomic by construction
+Jimfs_2,jimfs,2,divisible,enumeration_complete,1,
+Email_4,commons-email,2,divisible,enumeration_complete,1,
+Email_5,commons-email,3,unknown,artifact_split_test_compile_failure,,"runner.py:159 ""task should end"" — base program with injected split tests fails to compile"
+Text_1,commons-text,2,divisible,enumeration_complete,1,
+Text_2,commons-text,3,divisible,enumeration_complete,2,
+Text_5,commons-text,4,unknown,test_run_timeout_900s,,"inherent — clean isolated re-run 933.9 s (contaminated attempt 934.4 s; deterministic)"
+Graph_1,commons-graph,11,unknown,bug_budget_timeout_1h,,"clean isolated re-run used the full 3600.0 s; 2048-pattern space"
+Graph_3,commons-graph,7,divisible,enumeration_complete,2,
+Graph_4,commons-graph,2,unknown,test_run_timeout_900s,,"inherent — clean isolated re-run 912.7 s"
+Bcel_2,commons-bcel,3,divisible,enumeration_complete,2,

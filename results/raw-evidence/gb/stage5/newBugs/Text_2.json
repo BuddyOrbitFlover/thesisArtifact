@@ -1,0 +1,78 @@
+{
+    "original": {
+        "num_of_hunks": 3,
+        "0": {
+            "file_name": "src/main/java/org/apache/commons/text/WordUtils.java",
+            "from_line_no": 414,
+            "to_line_no": 415,
+            "replaced_with": "        if (StringUtils.isEmpty(str)) {\n",
+            "replaced": "        final int delimLen = delimiters == null ? -1 : delimiters.length;\n        if (StringUtils.isEmpty(str) || delimLen == 0) {\n",
+            "patch_type": "replace",
+            "next_line_no": 416
+        },
+        "1": {
+            "file_name": "src/main/java/org/apache/commons/text/WordUtils.java",
+            "from_line_no": 493,
+            "to_line_no": 494,
+            "replaced_with": "        if (StringUtils.isEmpty(str)) {\n",
+            "replaced": "        final int delimLen = delimiters == null ? -1 : delimiters.length;\n        if (StringUtils.isEmpty(str) || delimLen == 0) {\n",
+            "patch_type": "replace",
+            "next_line_no": 495
+        },
+        "2": {
+            "file_name": "src/main/java/org/apache/commons/text/WordUtils.java",
+            "from_line_no": 548,
+            "to_line_no": 549,
+            "replaced_with": "        if (StringUtils.isEmpty(str)) {\n",
+            "replaced": "        final int delimLen = delimiters == null ? -1 : delimiters.length;\n        if (StringUtils.isEmpty(str) || delimLen == 0) {\n",
+            "patch_type": "replace",
+            "next_line_no": 550
+        }
+    },
+    "method": {
+        "failing_tests": [
+            "org.apache.commons.text.WordUtilsTest::testCapitalizeFully_Text88",
+            "org.apache.commons.text.WordUtilsTest::testUnCapitalize_Text88"
+        ],
+        "org.apache.commons.text.WordUtilsTest::testCapitalizeFully_Text88": {
+            "file_path": "src/test/java/org/apache/commons/text/WordUtilsTest.java",
+            "Instance": "Begin: Pos(231, 5)\nEnd: Pos(234, 5)\nSource: /tmp/Text_2/src/test/java//org/apache/commons/text/WordUtilsTest.java\nName: testCapitalizeFully_Text88\nChilds: [StatementAssertion<Begin: Pos(233, 9), End: Pos(233, 95)>,\n]",
+            "source": "/tmp/Text_2/src/test/java//org/apache/commons/text/WordUtilsTest.java",
+            "name": "testCapitalizeFully_Text88",
+            "begin": "Pos(231, 5)",
+            "end": "Pos(234, 5)",
+            "begin_line_no": 231,
+            "end_line_no": 234,
+            "child": [
+                "Begin: Pos(233, 9)\nEnd: Pos(233, 95)\nSource: StatementExpression\nName: <Unknown>\nChilds: []"
+            ],
+            "splited": [],
+            "func": {}
+        },
+        "org.apache.commons.text.WordUtilsTest::testUnCapitalize_Text88": {
+            "file_path": "src/test/java/org/apache/commons/text/WordUtilsTest.java",
+            "Instance": "Begin: Pos(236, 5)\nEnd: Pos(239, 5)\nSource: /tmp/Text_2/src/test/java//org/apache/commons/text/WordUtilsTest.java\nName: testUnCapitalize_Text88\nChilds: [StatementAssertion<Begin: Pos(238, 9), End: Pos(238, 92)>,\n]",
+            "source": "/tmp/Text_2/src/test/java//org/apache/commons/text/WordUtilsTest.java",
+            "name": "testUnCapitalize_Text88",
+            "begin": "Pos(236, 5)",
+            "end": "Pos(239, 5)",
+            "begin_line_no": 236,
+            "end_line_no": 239,
+            "child": [
+                "Begin: Pos(238, 9)\nEnd: Pos(238, 92)\nSource: StatementExpression\nName: <Unknown>\nChilds: []"
+            ],
+            "splited": [],
+            "func": {}
+        }
+    },
+    "001": {
+        "failing_tests": [
+            "org.apache.commons.text.WordUtilsTest::testUnCapitalize_Text88"
+        ]
+    },
+    "110": {
+        "failing_tests": [
+            "org.apache.commons.text.WordUtilsTest::testCapitalizeFully_Text88"
+        ]
+    }
+}

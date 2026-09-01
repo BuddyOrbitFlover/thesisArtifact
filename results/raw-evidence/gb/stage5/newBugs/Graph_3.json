@@ -1,0 +1,130 @@
+{
+    "original": {
+        "num_of_hunks": 7,
+        "0": {
+            "file_name": "src/main/java/org/apache/commons/graph/model/BaseMutableGraph.java",
+            "from_line_no": 108,
+            "to_line_no": 108,
+            "replaced_with": "        final VertexPair<V> vertexPair = new VertexPair<V>( head, tail );\n",
+            "replaced": "        VertexPair<V> vertexPair = new VertexPair<V>( head, tail );\n",
+            "patch_type": "replace",
+            "next_line_no": 109
+        },
+        "1": {
+            "file_name": "src/main/java/org/apache/commons/graph/model/BaseMutableGraph.java",
+            "replaced_with": "    protected void internalRemoveEdge( V head, E e, V tail )\n    {\n        final VertexPair<V> vertexPair = new VertexPair<V>( head, tail );\n        getIndexedVertices().remove( e );\n        getIndexedEdges().remove( vertexPair );\n        getAdjacencyList().get( vertexPair.getHead() ).remove( vertexPair.getTail() );\n    }\n",
+            "patch_type": "insert",
+            "next_line_no": 117
+        },
+        "2": {
+            "file_name": "src/main/java/org/apache/commons/graph/model/BaseMutableGraph.java",
+            "replaced_with": "        final VertexPair<V> vertexPair = getVertices( e );\n        checkGraphCondition( vertexPair != null, \"Edge '%s' not present in the Graph\", e );\n",
+            "patch_type": "insert",
+            "next_line_no": 131
+        },
+        "3": {
+            "file_name": "src/main/java/org/apache/commons/graph/model/BaseMutableGraph.java",
+            "replaced_with": "        internalRemoveEdge( vertexPair.getHead(), e, vertexPair.getTail() );\n        getAllEdges().remove( e );\n",
+            "patch_type": "insert",
+            "next_line_no": 133
+        },
+        "4": {
+            "file_name": "src/main/java/org/apache/commons/graph/model/DirectedMutableGraph.java",
+            "replaced_with": "import org.apache.commons.graph.VertexPair;\n",
+            "patch_type": "insert",
+            "next_line_no": 30
+        },
+        "5": {
+            "file_name": "src/main/java/org/apache/commons/graph/model/DirectedMutableGraph.java",
+            "replaced_with": "        final VertexPair<V> vertices = getVertices( e );\n        inbound.get( vertices.getTail() ).remove( vertices.getHead() );\n        outbound.get( vertices.getHead() ).remove( vertices.getTail() );\n",
+            "patch_type": "insert",
+            "next_line_no": 124
+        },
+        "6": {
+            "file_name": "src/main/java/org/apache/commons/graph/model/UndirectedMutableGraph.java",
+            "replaced_with": "        internalRemoveEdge( getVertices( e ).getTail(), e, getVertices( e ).getHead() );\n",
+            "patch_type": "insert",
+            "next_line_no": 80
+        }
+    },
+    "method": {
+        "failing_tests": [
+            "org.apache.commons.graph.model.BaseMutableGraphTestCase::testUndirectedGraphRemoveEdge",
+            "org.apache.commons.graph.model.BaseMutableGraphTestCase::testUndirectedGraphRemoveEdgeNotExists",
+            "org.apache.commons.graph.model.BaseMutableGraphTestCase::testDirectedGraphRemoveEdge",
+            "org.apache.commons.graph.model.BaseMutableGraphTestCase::testDirectedGraphRemoveEdgeNotExists"
+        ],
+        "org.apache.commons.graph.model.BaseMutableGraphTestCase::testUndirectedGraphRemoveEdge": {
+            "file_path": "src/test/java/org/apache/commons/graph/model/BaseMutableGraphTestCase.java",
+            "Instance": "Begin: Pos(297, 5)\nEnd: Pos(315, 5)\nSource: /tmp/Graph_3/src/test/java//org/apache/commons/graph/model/BaseMutableGraphTestCase.java\nName: testUndirectedGraphRemoveEdge\nChilds: [StatementAssertion<Begin: Pos(314, 9), End: Pos(314, 27)>,\n]",
+            "source": "/tmp/Graph_3/src/test/java//org/apache/commons/graph/model/BaseMutableGraphTestCase.java",
+            "name": "testUndirectedGraphRemoveEdge",
+            "begin": "Pos(297, 5)",
+            "end": "Pos(315, 5)",
+            "begin_line_no": 297,
+            "end_line_no": 315,
+            "child": [
+                "Begin: Pos(314, 9)\nEnd: Pos(314, 27)\nSource: StatementExpression\nName: <Unknown>\nChilds: []"
+            ],
+            "splited": [],
+            "func": {}
+        },
+        "org.apache.commons.graph.model.BaseMutableGraphTestCase::testUndirectedGraphRemoveEdgeNotExists": {
+            "file_path": "src/test/java/org/apache/commons/graph/model/BaseMutableGraphTestCase.java",
+            "Instance": "Begin: Pos(321, 5)\nEnd: Pos(341, 5)\nSource: /tmp/Graph_3/src/test/java//org/apache/commons/graph/model/BaseMutableGraphTestCase.java\nName: testUndirectedGraphRemoveEdgeNotExists\nChilds: [StatementAssertion<Begin: Pos(336, 13), End: Pos(336, 36)>,\n]",
+            "source": "/tmp/Graph_3/src/test/java//org/apache/commons/graph/model/BaseMutableGraphTestCase.java",
+            "name": "testUndirectedGraphRemoveEdgeNotExists",
+            "begin": "Pos(321, 5)",
+            "end": "Pos(341, 5)",
+            "begin_line_no": 321,
+            "end_line_no": 341,
+            "child": [
+                "Begin: Pos(336, 13)\nEnd: Pos(336, 36)\nSource: StatementExpression\nName: <Unknown>\nChilds: []"
+            ],
+            "splited": [],
+            "func": {}
+        },
+        "org.apache.commons.graph.model.BaseMutableGraphTestCase::testDirectedGraphRemoveEdge": {
+            "file_path": "src/test/java/org/apache/commons/graph/model/BaseMutableGraphTestCase.java",
+            "Instance": "Begin: Pos(275, 5)\nEnd: Pos(291, 5)\nSource: /tmp/Graph_3/src/test/java//org/apache/commons/graph/model/BaseMutableGraphTestCase.java\nName: testDirectedGraphRemoveEdge\nChilds: [StatementAssertion<Begin: Pos(290, 9), End: Pos(290, 28)>,\n]",
+            "source": "/tmp/Graph_3/src/test/java//org/apache/commons/graph/model/BaseMutableGraphTestCase.java",
+            "name": "testDirectedGraphRemoveEdge",
+            "begin": "Pos(275, 5)",
+            "end": "Pos(291, 5)",
+            "begin_line_no": 275,
+            "end_line_no": 291,
+            "child": [
+                "Begin: Pos(290, 9)\nEnd: Pos(290, 28)\nSource: StatementExpression\nName: <Unknown>\nChilds: []"
+            ],
+            "splited": [],
+            "func": {}
+        },
+        "org.apache.commons.graph.model.BaseMutableGraphTestCase::testDirectedGraphRemoveEdgeNotExists": {
+            "file_path": "src/test/java/org/apache/commons/graph/model/BaseMutableGraphTestCase.java",
+            "Instance": "Begin: Pos(347, 5)\nEnd: Pos(367, 5)\nSource: /tmp/Graph_3/src/test/java//org/apache/commons/graph/model/BaseMutableGraphTestCase.java\nName: testDirectedGraphRemoveEdgeNotExists\nChilds: [StatementAssertion<Begin: Pos(362, 13), End: Pos(362, 36)>,\n]",
+            "source": "/tmp/Graph_3/src/test/java//org/apache/commons/graph/model/BaseMutableGraphTestCase.java",
+            "name": "testDirectedGraphRemoveEdgeNotExists",
+            "begin": "Pos(347, 5)",
+            "end": "Pos(367, 5)",
+            "begin_line_no": 347,
+            "end_line_no": 367,
+            "child": [
+                "Begin: Pos(362, 13)\nEnd: Pos(362, 36)\nSource: StatementExpression\nName: <Unknown>\nChilds: []"
+            ],
+            "splited": [],
+            "func": {}
+        }
+    },
+    "0010000": {
+        "failing_tests": [
+            "org.apache.commons.graph.model.BaseMutableGraphTestCase::testUndirectedGraphRemoveEdgeNotExists",
+            "org.apache.commons.graph.model.BaseMutableGraphTestCase::testDirectedGraphRemoveEdgeNotExists"
+        ]
+    },
+    "0111000": {
+        "failing_tests": [
+            "org.apache.commons.graph.model.BaseMutableGraphTestCase::testDirectedGraphRemoveEdge",
+            "org.apache.commons.graph.model.BaseMutableGraphTestCase::testUndirectedGraphRemoveEdge"
+        ]
+    }
+}

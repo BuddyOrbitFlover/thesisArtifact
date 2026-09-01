@@ -1,0 +1,33 @@
+{
+    "original": {
+        "num_of_hunks": 2,
+        "0": {
+            "file_name": "src/main/java/org/apache/commons/ognl/OgnlRuntime.java",
+            "from_line_no": 2739,
+            "to_line_no": 2740,
+            "replaced_with": "                    || methods[i].getName().toLowerCase().equals( \"has\" + name )\n                    || methods[i].getName().toLowerCase().equals( \"is\" + name ) )\n",
+            "replaced": "                    || methods[i].getName().toLowerCase().equals( \"has\" + name ) || methods[i].getName().toLowerCase().equals( \"is\"\n                                                                                                                                   + name ) )\n",
+            "patch_type": "replace",
+            "next_line_no": 2741
+        },
+        "1": {
+            "file_name": "src/main/java/org/apache/commons/ognl/OgnlRuntime.java",
+            "from_line_no": 2747,
+            "to_line_no": 2747,
+            "replaced_with": "                        if ( methods[i].getName().equals( name ) )\n                        {\n                            return methods[i].getMethod();\n                        }\n                        else if ( ( m != null\n                                && m.getParameterTypes().length > methods[i].getMethod().getParameterTypes().length )\n",
+            "replaced": "                        if ( ( m != null && m.getParameterTypes().length > methods[i].getMethod().getParameterTypes().length )\n",
+            "patch_type": "replace",
+            "next_line_no": 2748
+        }
+    },
+    "method": {
+        "failing_tests": [
+            "org.apache.commons.ognl.test.CollectionDirectPropertyTest::runTest[3]"
+        ]
+    },
+    "01": {
+        "failing_tests": [
+            "org.apache.commons.ognl.test.CollectionDirectPropertyTest::runTest[3]"
+        ]
+    }
+}

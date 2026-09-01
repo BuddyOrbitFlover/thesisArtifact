@@ -1,0 +1,10 @@
+sub_bug,source,pattern,fixed_version_failing,disposition,reason
+Csv_17_1,S5,1001000000000,0,queued,
+Jnagmp_1_1,S5,010011,1,dropped,complement whole-method trigger (testSmallExhaustiveInsecure) not excludable per-cid
+Jnagmp_1_2,S5,101100,1,dropped,complement whole-method trigger (testSmallExhaustiveSecure) not excludable per-cid
+Rdf4j_rio_jsonld_1_1,S5,01010,0,queued,
+Rdf4j_rio_rdfjson_1_1,S5,00011,0,queued,
+Rdf4j_rio_rdfjson_2_1,S5,000011,0,queued,
+Tika_core_9_1,S2,00111,0,queued,after per-rev env exclusion (LanguageProfilerBuilderTest x2)
+Tika_core_23_1,S2,110010,2,dropped,env exclusion did not take effect in catena checkout; second-failure rule
+JacksonModuleJsonSchema_1_1,S2,1110,0,queued,

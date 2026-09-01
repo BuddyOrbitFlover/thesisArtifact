@@ -1,0 +1,27 @@
+bug,arm,verdict,note,nh,pats
+Fluo_api_1,A,single_divided,"pats=0, 'No new failing tests but only 1 hunk'",2,0
+Fluo_api_3,A,indivisible,,2,1
+JacksonDataformatBinary_avro_1,A,divisible,"+exc task-should-end post-verdict; lstrip-fix retry",5,1
+JacksonDataformatBinary_avro_2,A,indivisible,lstrip-fix retry,3,1
+JacksonDataformatsText_properties_2,A,censored_split_compile,task should end,3,
+Jackson_datatype_hibernate4_1,A,indivisible,,2,1
+Jnagmp_1,A,divisible,,6,2
+Rdf4j_query_1,A,divisible,,2,1
+Rdf4j_rio_jsonld_1,A,divisible,,5,1
+Rdf4j_rio_jsonld_2,A,indivisible,,2,1
+Rdf4j_rio_rdfjson_1,A,divisible,,5,1
+Rdf4j_rio_rdfjson_2,A,divisible,,6,1
+Rdf4j_rio_rdfxml_1,A,indivisible,,2,1
+Rocketmq_mqtt_cs_1,A,indivisible,,2,1
+Rocketmq_mqtt_ds_1,A,indivisible,,2,1
+Cli_41,B,indivisible,,2,1
+Cli_42,B,censored_tests_timeout,,2,
+Codec_19,B,indivisible,,2,1
+Collections_29,B,divisible,+exc task-should-end post-verdict,2,1
+Compress_50,B,censored_tests_timeout,,6,
+Csv_17,B,divisible,+exc generator-timeout post-verdict,13,1
+JacksonCore_28,B,indivisible,,2,1
+JacksonDatabind_112,B,indivisible,,2,1
+Lang_71,B,indivisible,,2,1
+Math_1,B,censored_split_compile,task should end,2,
+Math_2,B,censored_split_compile,task should end,2,

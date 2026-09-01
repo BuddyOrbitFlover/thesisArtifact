@@ -1,0 +1,10 @@
+{
+    "patch": [
+        {
+            "file_name": "src/main/java/com/fasterxml/jackson/annotation/JsonInclude.java",
+            "replaced_with": "            } else if (ciDiff) {\n                return new Value(_valueInclusion, ci);\n",
+            "patch_type": "insert",
+            "next_line_no": 253
+        }
+    ]
+}

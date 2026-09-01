@@ -1,0 +1,1 @@
+com.google.common.jimfs.JimfsUnixLikeFileSystemTest::testOutputStream_withTruncateExistingAndNotWrite_truncatesFile$catena_1

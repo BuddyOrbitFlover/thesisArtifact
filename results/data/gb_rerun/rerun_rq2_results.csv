@@ -1,0 +1,15 @@
+sub_bug,source_bug,pattern,hunks,failing_tests,fl_nonzero_components,wall_s,termination,fixed_dirs,plausible_patches,partial_patches,plausible,correct
+Johnzon_core_4_1,Johnzon_core_4,0011,2,19,314,1506,search exhausted,0,0,0,no,-
+Johnzon_core_4_2,Johnzon_core_4,1100,2,19,314,1511,search exhausted,0,0,0,no,-
+AaltoXml_9_2,AaltoXml_9,011,2,8,972,18015,budget-censored (5h cap),1,0,4,no,-
+Woodstox_6_1,Woodstox_6,00100110,3,40,869,18042,budget-censored (5h cap),3,16,0,yes,no
+Jcabi_log_4_1,Jcabi_log_4,100101,3,1,17,1697,search exhausted,0,0,0,no,-
+Jcabi_log_4_2,Jcabi_log_4,101101,4,1,17,1694,search exhausted,0,0,0,no,-
+Dagger_core_3_1,Dagger_core_3,0011,2,2,341,18010,budget-censored (5h cap),0,0,0,no,-
+Dagger_core_3_2,Dagger_core_3,1100,2,2,341,18011,budget-censored (5h cap),0,0,0,no,-
+Dagger_core_17_1,Dagger_core_17,10001,2,1,278,18012,budget-censored (5h cap),0,0,0,no,-
+Google_java_format_core_1_2,Google_java_format_core_1,0111,3,1,1040,18024,budget-censored (5h cap),0,0,0,no,-
+RTree_4_1,RTree_4,110,2,1,328,18023,budget-censored (5h cap),0,0,0,no,-
+Proj4J_6_3,Proj4J_6,001100,2,1,778,18051,budget-censored (5h cap),0,0,0,no,-
+Proj4J_6_4,Proj4J_6,101100,3,1,710,18052,budget-censored (5h cap),0,0,0,no,-
+Disklrucache_2_1,Disklrucache_2,10111,4,1,122,18013,budget-censored (5h cap),0,0,0,no,-

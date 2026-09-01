@@ -1,0 +1,172 @@
+bug                        verdict        note        nh  pats
+AaltoXml_3                 indivisible                 2     1
+AaltoXml_8                 divisible                   4     1
+Dagger_core_1              indivisible                 2     1
+Dagger_core_11             indivisible                 5     1
+Dagger_core_13             divisible                   6     1
+Dagger_core_14             divisible                   8     5
+Dagger_core_15             divisible                   3     2
+Dagger_core_18             indivisible                 2     1
+Dagger_core_19             unknown        exception 
+Dagger_core_2              divisible                   7     1
+Dagger_core_6              divisible                   2     1
+Dagger_core_7              divisible                   2     1
+Disklrucache_3             divisible                   2     2
+Disklrucache_6             divisible                   2     1
+IO_1                       divisible                   5     2
+IO_10                      divisible                   2     2
+IO_14                      divisible                   2     1
+IO_2                       divisible                   2     1
+IO_22                      divisible                   2     2
+IO_31                      indivisible    +exc        29     0
+IO_9                       divisible                   2     1
+Javapoet_10                divisible                   7     7
+Javapoet_11                divisible                   8     2
+Javapoet_14                indivisible                 2     1
+Javapoet_16                indivisible                 2     1
+Javapoet_17                divisible                   7     2
+Javapoet_2                 indivisible    +exc         3     1
+Javapoet_5                 indivisible                 3     1
+Javapoet_6                 indivisible                 5     1
+Javapoet_9                 indivisible                 3     1
+Jcabi_http_11              divisible                   4     2
+Jcabi_http_12              divisible                   3     1
+Jcabi_http_16              indivisible                 3     1
+Jcabi_http_2               divisible                   2     1
+Jcabi_http_5               indivisible                 2     1
+Jcabi_http_6               indivisible                 3     1
+Jcabi_http_7               divisible                   2     1
+Jcabi_log_1                indivisible                 2     1
+Jcabi_log_5                divisible                   6     2
+Jcabi_log_7                divisible                   3     2
+Jcabi_log_8                divisible                   6     1
+Johnzon_core_10            divisible      +exc         4     1
+Johnzon_core_11            indivisible                 2     1
+Johnzon_core_12            divisible                   3     2
+Johnzon_core_5             divisible                   4     1
+Johnzon_core_6             indivisible                 2     1
+Johnzon_core_7             divisible                   8     5
+Markedj_10                 indivisible                 2     1
+Markedj_3                  divisible                   7     2
+Markedj_5                  unknown        exception 
+Markedj_6                  indivisible                 3     1
+Markedj_7                  divisible                   2     2
+Pool_12                    unknown        exception 
+Pool_14                    unknown        exception 
+Pool_16                    indivisible                 2     0
+Pool_20                    indivisible                 3     1
+Pool_26                    indivisible                 3     0
+Pool_27                    indivisible                 2     0
+Pool_30                    indivisible                 2     0
+Pool_6                     divisible                   3     1
+Pool_7                     indivisible                 5     0
+Proj4J_2                   indivisible                 3     1
+Proj4J_3                   divisible                   5     2
+Proj4J_5                   divisible                   9     1
+Proj4J_7                   divisible                   5     1
+Proj4J_8                   indivisible                 2     1
+Proj4J_9                   divisible      +exc        13     1
+RTree_1                    indivisible    +exc         2     1
+RTree_10                   divisible                   2     1
+RTree_11                   indivisible                 3     1
+RTree_12                   divisible                   2     1
+RTree_6                    indivisible    +exc         3     1
+RTree_7                    indivisible    +exc         3     1
+RTree_8                    divisible                   6     3
+Rdf4j_rio_turtle_10        divisible                   2     1
+Rdf4j_rio_turtle_4         indivisible                 3     1
+Rdf4j_rio_turtle_8         divisible                   2     1
+Rdf4j_rio_turtle_9         divisible                   5     2
+Shiro_core_144             indivisible                 2     1
+Shiro_core_203             divisible                   3     1
+Shiro_core_37              divisible                   2     1
+Spoon_1                    divisible                   2     2
+Spoon_11                   divisible                   2     1
+Spoon_13                   unknown        exception 
+Spoon_14                   divisible                   3     1
+Spoon_15                   indivisible                 3     1
+Spoon_16                   divisible                   4     1
+Spoon_17                   indivisible                 2     1
+Spoon_2                    divisible                   2     1
+Spoon_3                    divisible                   3     1
+Spoon_6                    divisible                   6     2
+Streamex_3                 indivisible                 2     1
+Streamex_6                 divisible                   3     1
+Streamex_7                 indivisible                 4     1
+Tape_4                     divisible                   4     1
+Tape_5                     divisible      +exc        14     1
+Tape_6                     unknown        exception 
+Tika_core_11               indivisible                 2     1
+Tika_core_21               divisible                   2     1
+Tika_core_23               divisible      +exc         6     1
+Tika_core_24               indivisible    +exc         2     1
+Tika_core_25               divisible                   5     1
+Tika_core_28               indivisible    +exc         5     1
+Tika_core_29               divisible                   4     1
+Tika_core_30               divisible                   2     2
+Tika_core_31               unknown        exception 
+Tika_core_32               divisible                   4     2
+Tika_core_33               divisible                   4     1
+Tika_core_34               indivisible                 2     1
+Tika_core_35               divisible                   5     4
+Tika_core_37               divisible                   4     1
+Tika_core_9                divisible      +exc         5     1
+Validator_1                divisible                   7     2
+Validator_11               indivisible                 4     1
+Validator_14               indivisible                 3     1
+Validator_20               indivisible                 2     1
+Validator_22               indivisible                 2     1
+Validator_24               divisible                   3     1
+Validator_4                divisible                   2     2
+Validator_6                divisible                   2     2
+Validator_7                indivisible                 2     0
+Vectorz_3                  divisible                   3     1
+Vectorz_5                  divisible                   5     1
+Vectorz_6                  indivisible                 5     1
+Wicket_core_1              divisible      +exc         2     1
+Wicket_core_13             indivisible                 2     1
+Wicket_core_4              divisible                   2     1
+Wicket_core_5              indivisible                 2     1
+Wicket_core_8              indivisible                 2     1
+Wicket_core_9              indivisible                 3     1
+Woodstox_2                 divisible                   4     1
+Woodstox_5                 divisible                   4     1
+Zip4j_1                    indivisible    +exc         4     1
+Zip4j_10                   unknown        exception 
+Zip4j_13                   divisible                   2     1
+Zip4j_15                   divisible                   3     1
+Zip4j_17                   divisible                   2     1
+Zip4j_18                   divisible                   3     2
+Zip4j_19                   divisible                   2     1
+Zip4j_2                    indivisible                 4     1
+Zip4j_20                   divisible                   4     1
+Zip4j_22                   divisible                   2     1
+Zip4j_23                   divisible                   2     1
+Zip4j_27                   divisible                   6     1
+Zip4j_28                   divisible                   4     1
+Zip4j_29                   divisible                   5     1
+Zip4j_30                   divisible                   4     1
+Zip4j_31                   divisible      +exc        13     1
+Zip4j_32                   divisible      +exc        12     2
+Zip4j_33                   divisible                   2     1
+Zip4j_34                   indivisible                 2     1
+Zip4j_35                   divisible                   3     1
+Zip4j_36                   divisible                   2     1
+Zip4j_37                   unknown        exception 
+Zip4j_38                   unknown        exception 
+Zip4j_39                   divisible      +exc         7     1
+Zip4j_4                    indivisible                 4     1
+Zip4j_40                   indivisible                 3     1
+Zip4j_42                   unknown        exception 
+Zip4j_43                   divisible      +exc         7     1
+Zip4j_44                   divisible      +exc        11     1
+Zip4j_45                   unknown        exception 
+Zip4j_46                   divisible                   4     1
+Zip4j_47                   divisible      +exc         6     1
+Zip4j_48                   divisible                   2     1
+Zip4j_49                   indivisible                 4     1
+Zip4j_5                    indivisible                 2     1
+Zip4j_50                   indivisible                 2     1
+Zip4j_51                   indivisible                 3     1
+Zip4j_52                   divisible      +exc         6     1
+Zip4j_9                    divisible                   2     1

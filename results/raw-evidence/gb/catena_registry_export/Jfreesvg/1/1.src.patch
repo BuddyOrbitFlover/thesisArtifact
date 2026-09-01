@@ -1,0 +1,16 @@
+{
+    "patch": [
+        {
+            "file_name": "src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java",
+            "replaced_with": "        if (xform != null) {\n",
+            "patch_type": "insert",
+            "next_line_no": 2572
+        },
+        {
+            "file_name": "src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java",
+            "replaced_with": "        }\n",
+            "patch_type": "insert",
+            "next_line_no": 2573
+        }
+    ]
+}

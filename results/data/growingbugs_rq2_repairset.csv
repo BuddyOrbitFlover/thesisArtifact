@@ -1,0 +1,6 @@
+sub_bug,original_bug,pattern,hunks,fl_failing_tests,fl_nonzero_components,fl_protocol,tbar_wall_s,termination,plausible,correct
+Jfreesvg_1_1,Jfreesvg_1,1100,2,1,63,gzoltar1.6.0-lib/ochiai/loaded_classes+relevant_tests,4064.4,search_succeeded,yes,yes (NullPointerChecker Patch_194_76 = token-identical dev fix)
+Text_2_2,Text_2,110,2,1,4,gzoltar1.6.0-lib/ochiai/loaded_classes+relevant_tests,160.1,search_exhausted,no,
+Graph_3_2,Graph_3,0111000,3,2,105,gzoltar1.6.0-lib/ochiai/loaded_classes+relevant_tests,18000,budget_censored_5h,no,
+Bcel_2_1,Bcel_2,101,2,4,440,gzoltar1.6.0-lib/ochiai/loaded_classes+relevant_tests,18000,budget_censored_5h,no,
+Bcel_2_2,Bcel_2,110,2,4,442,gzoltar1.6.0-lib/ochiai/loaded_classes+relevant_tests,18000,budget_censored_5h,no,

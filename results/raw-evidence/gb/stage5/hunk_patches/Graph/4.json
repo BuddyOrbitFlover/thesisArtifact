@@ -1,0 +1,17 @@
+{
+    "num_of_hunks": 2,
+    "0": {
+        "file_name": "src/main/java/org/apache/commons/graph/visit/DefaultVisitAlgorithmsSelector.java",
+        "from_line_no": 141,
+        "to_line_no": 144,
+        "replaced": "            if ( !skipVertex )\n            {\n                visitedVertices.add( v );                \n            }\n",
+        "patch_type": "delete",
+        "next_line_no": 145
+    },
+    "1": {
+        "file_name": "src/main/java/org/apache/commons/graph/visit/DefaultVisitAlgorithmsSelector.java",
+        "replaced_with": "                        visitedVertices.add( w );\n",
+        "patch_type": "insert",
+        "next_line_no": 160
+    }
+}

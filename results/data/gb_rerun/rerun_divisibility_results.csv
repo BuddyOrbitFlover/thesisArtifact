@@ -1,0 +1,56 @@
+bug,project,hunks,verdict,termination,source
+IO_12,IO,2,indivisible,enumeration complete,rerun
+IO_16,IO,1,single-hunk,trivially indivisible,rerun
+Validator_8,Validator,4,indivisible,enumeration complete,rerun
+Validator_15,Validator,1,single-hunk,trivially indivisible,rerun
+Pool_5,Pool,3,unknown,time-censored: single test run exceeds 900s cap,rerun
+Pool_21,Pool,7,unknown,time-censored: 1h whole-bug budget (128-pattern space),rerun
+Tika_core_6,Tika_core,1,single-hunk,trivially indivisible,rerun
+Tika_core_36,Tika_core,2,indivisible,enumeration complete,rerun
+Wicket_core_10,Wicket_core,1,single-hunk,trivially indivisible,rerun
+Wicket_core_16,Wicket_core,3,indivisible,enumeration complete,rerun
+Johnzon_core_4,Johnzon_core,4,divisible,enumeration complete,rerun
+Johnzon_core_8,Johnzon_core,4,divisible,enumeration complete,rerun
+Shiro_core_176,Shiro_core,1,single-hunk,trivially indivisible,rerun
+Shiro_core_181,Shiro_core,3,indivisible,enumeration complete,rerun
+Rdf4j_rio_turtle_1,Rdf4j_rio_turtle,2,divisible,enumeration complete,rerun
+Rdf4j_rio_turtle_2,Rdf4j_rio_turtle,4,divisible,enumeration complete (partial exception logged),rerun
+AaltoXml_2,AaltoXml,2,unknown,artifact failure: split-test program fails to compile (task should end),rerun
+AaltoXml_9,AaltoXml,3,divisible,enumeration complete,rerun
+Woodstox_1,Woodstox,1,single-hunk,trivially indivisible,rerun
+Woodstox_6,Woodstox,8,divisible,enumeration complete (partial exception logged),rerun
+Jcabi_http_8,Jcabi_http,1,single-hunk,trivially indivisible,rerun
+Jcabi_http_14,Jcabi_http,3,divisible,enumeration complete (partial exception logged),rerun
+Jcabi_log_4,Jcabi_log,6,divisible,enumeration complete,rerun
+Jcabi_log_9,Jcabi_log,1,single-hunk,trivially indivisible,rerun
+Dagger_core_3,Dagger_core,4,divisible,enumeration complete,rerun
+Dagger_core_17,Dagger_core,5,divisible,enumeration complete,rerun
+Google_java_format_core_1,Google_java_format_core,4,divisible,enumeration complete,rerun
+Zip4j_11,Zip4j,2,indivisible,enumeration complete,rerun
+Zip4j_25,Zip4j,1,single-hunk,trivially indivisible,rerun
+Spoon_7,Spoon,1,single-hunk,trivially indivisible,rerun
+Spoon_9,Spoon,1,single-hunk,trivially indivisible,rerun
+Javapoet_3,Javapoet,3,unknown,artifact failure: split-test program fails to compile (task should end),rerun
+Javapoet_15,Javapoet,2,indivisible,enumeration complete,rerun
+Markedj_1,Markedj,2,indivisible,enumeration complete,rerun
+Markedj_14,Markedj,1,single-hunk,trivially indivisible,rerun
+Tape_2,Tape,2,divisible,enumeration complete,rerun
+Tape_8,Tape,1,single-hunk,trivially indivisible,rerun
+RTree_3,RTree,3,divisible,enumeration complete,rerun
+RTree_4,RTree,3,divisible,enumeration complete,rerun
+Proj4J_4,Proj4J,1,single-hunk,trivially indivisible,rerun
+Proj4J_6,Proj4J,6,divisible,enumeration complete,rerun
+Streamex_2,Streamex,5,divisible,enumeration complete,rerun
+Streamex_4,Streamex,2,divisible,enumeration complete,rerun
+Vectorz_2,Vectorz,2,indivisible,enumeration complete,rerun
+Vectorz_4,Vectorz,1,single-hunk,trivially indivisible,rerun
+Disklrucache_1,Disklrucache,1,single-hunk,trivially indivisible,rerun
+Disklrucache_2,Disklrucache,5,divisible,enumeration complete,rerun
+Bcel_3,Bcel,1,single-hunk,trivially indivisible,pilot-reuse
+Bcel_5,Bcel,1,single-hunk,trivially indivisible,pilot-reuse
+Graph_1,Graph,11,unknown,time-censored: 1h whole-bug budget (2048-pattern space; pilot §3.2),pilot-reuse
+Graph_2,Graph,1,single-hunk,trivially indivisible,pilot-reuse
+Text_1,Text,2,divisible,enumeration complete,pilot-reuse
+Text_4,Text,1,single-hunk,trivially indivisible,pilot-reuse
+Jimfs_1,Jimfs,1,single-hunk,trivially indivisible,pilot-reuse
+Jimfs_2,Jimfs,2,divisible,enumeration complete,pilot-reuse

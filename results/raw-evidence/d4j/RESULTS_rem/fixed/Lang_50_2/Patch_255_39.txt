@@ -1,0 +1,155 @@
+diff --git a/failing_tests b/failing_tests
+index dc002510..e69de29b 100644
+--- a/failing_tests
++++ b/failing_tests
+@@ -1,83 +0,0 @@
+---- org.apache.commons.lang.time.FastDateFormatTest::test_changeDefault_Locale_DateInstance$catena_2
+-junit.framework.AssertionFailedError: expected same:<de_DE> was not:<en_US>
+-	at junit.framework.Assert.fail(Assert.java:57)
+-	at junit.framework.Assert.failNotSame(Assert.java:325)
+-	at junit.framework.Assert.assertSame(Assert.java:288)
+-	at junit.framework.Assert.assertSame(Assert.java:296)
+-	at junit.framework.TestCase.assertSame(TestCase.java:465)
+-	at org.apache.commons.lang.time.FastDateFormatTest.test_changeDefault_Locale_DateInstance$catena_2(FastDateFormatTest.java:146)
+-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+-	at java.lang.reflect.Method.invoke(Method.java:498)
+-	at junit.framework.TestCase.runTest(TestCase.java:176)
+-	at junit.framework.TestCase.runBare(TestCase.java:141)
+-	at junit.framework.TestResult$1.protect(TestResult.java:122)
+-	at junit.framework.TestResult.runProtected(TestResult.java:142)
+-	at junit.framework.TestResult.run(TestResult.java:125)
+-	at junit.framework.TestCase.run(TestCase.java:129)
+-	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+-	at junit.framework.TestSuite.run(TestSuite.java:250)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeInVM(JUnitTask.java:1484)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.execute(JUnitTask.java:872)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeOrQueue(JUnitTask.java:1972)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.execute1(JUnitTask.java:824)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.execute(JUnitTask.java:2277)
+-	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+-	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+-	at java.lang.reflect.Method.invoke(Method.java:498)
+-	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+-	at org.apache.tools.ant.Task.perform(Task.java:348)
+-	at org.apache.tools.ant.Target.execute(Target.java:392)
+-	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+-	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+-	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+-	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+-	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+-	at org.apache.tools.ant.Main.runBuild(Main.java:811)
+-	at org.apache.tools.ant.Main.startAnt(Main.java:217)
+-	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:280)
+-	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:109)
+---- org.apache.commons.lang.time.FastDateFormatTest::test_changeDefault_Locale_DateInstance$catena_4
+-junit.framework.AssertionFailedError
+-	at junit.framework.Assert.fail(Assert.java:55)
+-	at junit.framework.Assert.assertTrue(Assert.java:22)
+-	at junit.framework.Assert.assertTrue(Assert.java:31)
+-	at junit.framework.TestCase.assertTrue(TestCase.java:201)
+-	at org.apache.commons.lang.time.FastDateFormatTest.test_changeDefault_Locale_DateInstance$catena_4(FastDateFormatTest.java:167)
+-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+-	at java.lang.reflect.Method.invoke(Method.java:498)
+-	at junit.framework.TestCase.runTest(TestCase.java:176)
+-	at junit.framework.TestCase.runBare(TestCase.java:141)
+-	at junit.framework.TestResult$1.protect(TestResult.java:122)
+-	at junit.framework.TestResult.runProtected(TestResult.java:142)
+-	at junit.framework.TestResult.run(TestResult.java:125)
+-	at junit.framework.TestCase.run(TestCase.java:129)
+-	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+-	at junit.framework.TestSuite.run(TestSuite.java:250)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeInVM(JUnitTask.java:1484)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.execute(JUnitTask.java:872)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeOrQueue(JUnitTask.java:1972)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.execute1(JUnitTask.java:824)
+-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.execute(JUnitTask.java:2277)
+-	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+-	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+-	at java.lang.reflect.Method.invoke(Method.java:498)
+-	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+-	at org.apache.tools.ant.Task.perform(Task.java:348)
+-	at org.apache.tools.ant.Target.execute(Target.java:392)
+-	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+-	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+-	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+-	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+-	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+-	at org.apache.tools.ant.Main.runBuild(Main.java:811)
+-	at org.apache.tools.ant.Main.startAnt(Main.java:217)
+-	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:280)
+-	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:109)
+diff --git a/src/java/org/apache/commons/lang/time/FastDateFormat.java b/src/java/org/apache/commons/lang/time/FastDateFormat.java
+index 8a26f283..aa17a128 100644
+--- a/src/java/org/apache/commons/lang/time/FastDateFormat.java
++++ b/src/java/org/apache/commons/lang/time/FastDateFormat.java
+@@ -287,7 +287,7 @@ public class FastDateFormat extends Format {
+         }
+ 
+ 
+-        FastDateFormat format = (FastDateFormat) cDateInstanceCache.get(key);
++        FastDateFormat format = (FastDateFormat) cDateInstanceCache.get(getInstance());
+         if (format == null) {
+             if (locale == null) {
+                 locale = Locale.getDefault();
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$CharacterLiteral.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$CharacterLiteral.class
+index 445f0341..3e2409ee 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$CharacterLiteral.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$CharacterLiteral.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$NumberRule.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$NumberRule.class
+index 425851ec..234cd4c3 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$NumberRule.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$NumberRule.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$PaddedNumberField.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$PaddedNumberField.class
+index e1bf4565..53df4478 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$PaddedNumberField.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$PaddedNumberField.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$Pair.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$Pair.class
+index 0517153c..549801a1 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$Pair.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$Pair.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$Rule.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$Rule.class
+index 4a80dedb..bd09a9f5 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$Rule.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$Rule.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$StringLiteral.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$StringLiteral.class
+index f94fcd20..535b00ef 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$StringLiteral.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$StringLiteral.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$TextField.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$TextField.class
+index 750c5fc7..5db5be81 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$TextField.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$TextField.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneDisplayKey.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneDisplayKey.class
+index ce399edb..44a3c60d 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneDisplayKey.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneDisplayKey.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneNameRule.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneNameRule.class
+index 903f96c7..b4461f9d 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneNameRule.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneNameRule.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneNumberRule.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneNumberRule.class
+index 256ce8cb..ae7b6e25 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneNumberRule.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$TimeZoneNumberRule.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$TwelveHourField.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$TwelveHourField.class
+index cd1227fe..f16e55af 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$TwelveHourField.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$TwelveHourField.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$TwentyFourHourField.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$TwentyFourHourField.class
+index 694edac0..f4e7630a 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$TwentyFourHourField.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$TwentyFourHourField.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitMonthField.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitMonthField.class
+index fb7ce782..078e3f2e 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitMonthField.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitMonthField.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitNumberField.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitNumberField.class
+index 6dc0a4f6..17e56f22 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitNumberField.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitNumberField.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitYearField.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitYearField.class
+index 3b60357c..7a6a37b2 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitYearField.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$TwoDigitYearField.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$UnpaddedMonthField.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$UnpaddedMonthField.class
+index 09e03e22..410a50a7 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$UnpaddedMonthField.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$UnpaddedMonthField.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat$UnpaddedNumberField.class b/target/classes/org/apache/commons/lang/time/FastDateFormat$UnpaddedNumberField.class
+index 75a044c2..3f5c2ef0 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat$UnpaddedNumberField.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat$UnpaddedNumberField.class differ
+diff --git a/target/classes/org/apache/commons/lang/time/FastDateFormat.class b/target/classes/org/apache/commons/lang/time/FastDateFormat.class
+index af3df022..201d9c74 100644
+Binary files a/target/classes/org/apache/commons/lang/time/FastDateFormat.class and b/target/classes/org/apache/commons/lang/time/FastDateFormat.class differ

@@ -1,0 +1,40 @@
+Checking out 468ed855 to /root/wk5_0/D4J/projects/Math_21.................. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 468ed855:dbb408e8..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Math-21b........................................ OK
+CatenaD4j# Tracing test files.............................................. Finished
+CatenaD4j# Applying test patch............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Buggy program version checked out for Math-21b1................. Finished
+CatenaD4j# Commit BUGGY version............................................ Finished
+CatenaD4j# Tag BUGGY version............................................... Finished
+CatenaD4j# Initialize BUGGY version........................................ Finished
+CatenaD4j# Tracing src files............................................... Finished
+CatenaD4j# Applying src patch.............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Fixed program version checked out for Math-21f1................. Finished
+CatenaD4j# Commit FIXED version............................................ Finished
+CatenaD4j# Tag FIXED version............................................... Finished
+CatenaD4j# Initialize FIXED version........................................ Finished
+CatenaD4j# Check out BUGGY version......................................... Finished
+CatenaD4j# Clean files..................................................... Finished
+CatenaD4j# Tasks all done.................................................. Finished
+Reinitialized existing Git repository in /root/wk5_0/D4J/projects/Math_21/.git/
+Math_21_1
+Math
+21
+1
+write_dir:/root/wk5_0/D4J/projects/Math_21
+execute================catena4j checkout -p Math -v 21b1 -w /root/wk5_0/D4J/projects/Math_21
+命令为：cd /root/wk5_0/D4J/projects/Math_21 && defects4j compile
+命令为：cd /root/wk5_0/D4J/projects/Math_21 && defects4j test
+命令为：cd /root/wk5_0 && ./NormalFLTBarRunner.sh /root/wk5_0/D4J/projects/ Math_21 /root/defects4j/

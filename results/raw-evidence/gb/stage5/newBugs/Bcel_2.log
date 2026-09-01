@@ -1,0 +1,518 @@
+---
+Begin generate bug_id: Bcel_2
+num_of_hunks: 3
+timeout for running: 3600
+use working dir: ./working/data/Bcel_2
+Try to checkout Bcel_2
+build dir: ['target/classes', 'target/test-classes']
+init FileManager
+trace file: src/main/java/org/apache/bcel/generic/LocalVariableGen.java
+trace file: src/main/java/org/apache/bcel/generic/MethodGen.java
+trying to replace old failing tests
+edit: replace from 48 range 20 at src/test/java/org/apache/bcel/generic/MethodGenTestCase.java
+to
+    public void testRemoveLocalVariable$catena_0() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        assertEquals("variable name", "a", lv.getName());                                                                            /***** ORIGINAL ASSERTION IS HERE *****/
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variable
+        mg.removeLocalVariable(lv);
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariable$catena_1() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        assertNotNull("scope start", start);                                                                                         /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variable
+        mg.removeLocalVariable(lv);
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariable$catena_2() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertNotNull("scope end", end);                                                                                             /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variable
+        mg.removeLocalVariable(lv);
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariable$catena_3() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));              /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variable
+        mg.removeLocalVariable(lv);
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariable$catena_4() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));                  /***** ORIGINAL ASSERTION IS HERE *****/
+
+        // now let's remove the local variable
+        mg.removeLocalVariable(lv);
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariable$catena_5() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variable
+        mg.removeLocalVariable(lv);
+
+        assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));         /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariable$catena_6() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variable
+        mg.removeLocalVariable(lv);
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));             /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariable$catena_7() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variable
+        mg.removeLocalVariable(lv);
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertNull("scope start", lv.getStart());                                                                                    /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariable$catena_8() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variable
+        mg.removeLocalVariable(lv);
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertNull("scope end", lv.getEnd());                                                                                        /***** ORIGINAL ASSERTION IS HERE *****/
+    }
+edit: replace from 69 range 20 at src/test/java/org/apache/bcel/generic/MethodGenTestCase.java
+to
+    public void testRemoveLocalVariables$catena_0() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        assertEquals("variable name", "a", lv.getName());                                                                            /***** ORIGINAL ASSERTION IS HERE *****/
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variables
+        mg.removeLocalVariables();
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariables$catena_1() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        assertNotNull("scope start", start);                                                                                         /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variables
+        mg.removeLocalVariables();
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariables$catena_2() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertNotNull("scope end", end);                                                                                             /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variables
+        mg.removeLocalVariables();
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariables$catena_3() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));              /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variables
+        mg.removeLocalVariables();
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariables$catena_4() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));                  /***** ORIGINAL ASSERTION IS HERE *****/
+
+        // now let's remove the local variables
+        mg.removeLocalVariables();
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariables$catena_5() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variables
+        mg.removeLocalVariables();
+
+        assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));         /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariables$catena_6() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variables
+        mg.removeLocalVariables();
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));             /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariables$catena_7() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variables
+        mg.removeLocalVariables();
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertNull("scope start", lv.getStart());                                                                                    /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertNull("scope end", lv.getEnd());                                                                                   }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     public void testRemoveLocalVariables$catena_8() throws Exception {
+        MethodGen mg = getMethod(Foo.class, "bar");
+
+        LocalVariableGen lv = mg.getLocalVariables()[1];
+        try{ assertEquals("variable name", "a", lv.getName());                                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+        InstructionHandle start = lv.getStart();
+        InstructionHandle end = lv.getEnd();
+        try{ assertNotNull("scope start", start);                                                                                    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNotNull("scope end", end);                                                                                        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope start not targeted by the local variable", Arrays.asList(start.getTargeters()).contains(lv));         }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertTrue("scope end not targeted by the local variable", Arrays.asList(end.getTargeters()).contains(lv));             }catch(Throwable __SHOULD_BE_IGNORED){}
+
+        // now let's remove the local variables
+        mg.removeLocalVariables();
+
+        try{ assertFalse("scope start still targeted by the removed variable", Arrays.asList(start.getTargeters()).contains(lv));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertFalse("scope end still targeted by the removed variable", Arrays.asList(end.getTargeters()).contains(lv));        }catch(Throwable __SHOULD_BE_IGNORED){}
+        try{ assertNull("scope start", lv.getStart());                                                                               }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertNull("scope end", lv.getEnd());                                                                                        /***** ORIGINAL ASSERTION IS HERE *****/
+    }
+trace file: src/test/java/org/apache/bcel/generic/MethodGenTestCase.java
+new test num: 18
+ori test num: 0
+pattern: 000
+patches are written to file
+running tests...
+used time: Finished in 40.81 seconds
+Failing tests: 8
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_5
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_6
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_7
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_8
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_5
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_6
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_7
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_8
+processed: 000
+pattern: 001
+try to fix hunk: 2
+insert before 346 with         for (LocalVariableGen lv : variable_vec) {
+            lv.dispose();
+        }
+
+patches are written to file
+running tests...
+seems testing failed, see output:
+<OUTPUT>
+<Common Compile Failed>
+<ENDOUTPUT>
+processed: 001
+pattern: 010
+try to fix hunk: 1
+insert before 338 with         l.dispose();
+
+patches are written to file
+running tests...
+seems testing failed, see output:
+<OUTPUT>
+<Common Compile Failed>
+<ENDOUTPUT>
+processed: 010
+pattern: 100
+try to fix hunk: 0
+insert before 169 with     void dispose() {
+        setStart(null);
+        setEnd(null);
+    }
+
+patches are written to file
+running tests...
+used time: Finished in 34.07 seconds
+Failing tests: 8
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_5
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_6
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_7
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_8
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_5
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_6
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_7
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_8
+No new failing tests but only 1 hunk
+processed: 100
+pattern: 011
+try to fix hunk: 1
+insert before 338 with         l.dispose();
+
+try to fix hunk: 2
+insert before 346 with         for (LocalVariableGen lv : variable_vec) {
+            lv.dispose();
+        }
+
+patches are written to file
+running tests...
+seems testing failed, see output:
+<OUTPUT>
+<Common Compile Failed>
+<ENDOUTPUT>
+processed: 011
+pattern: 101
+try to fix hunk: 0
+insert before 169 with     void dispose() {
+        setStart(null);
+        setEnd(null);
+    }
+
+try to fix hunk: 2
+insert before 346 with         for (LocalVariableGen lv : variable_vec) {
+            lv.dispose();
+        }
+
+patches are written to file
+running tests...
+used time: Finished in 41.60 seconds
+Failing tests: 4
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_5
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_6
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_7
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_8
+Can independently fix ['org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_5', 'org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_8', 'org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_6', 'org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_7']
+select new bug
+Pattern: 101
+new failing tests:
+org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_5
+org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_8
+org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_6
+org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_7
+Save found bug
+processed: 101
+pattern: 110
+try to fix hunk: 0
+insert before 169 with     void dispose() {
+        setStart(null);
+        setEnd(null);
+    }
+
+try to fix hunk: 1
+insert before 338 with         l.dispose();
+
+patches are written to file
+running tests...
+used time: Finished in 41.52 seconds
+Failing tests: 4
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_5
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_6
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_7
+	org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariables$catena_8
+Can independently fix ['org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_6', 'org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_5', 'org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_7', 'org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_8']
+select new bug
+Pattern: 110
+new failing tests:
+org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_6
+org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_5
+org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_7
+org.apache.bcel.generic.MethodGenTestCase::testRemoveLocalVariable$catena_8
+Save found bug
+processed: 110
+pattern: 111
+try to fix hunk: 0
+insert before 169 with     void dispose() {
+        setStart(null);
+        setEnd(null);
+    }
+
+try to fix hunk: 1
+insert before 338 with         l.dispose();
+
+try to fix hunk: 2
+insert before 346 with         for (LocalVariableGen lv : variable_vec) {
+            lv.dispose();
+        }
+
+patches are written to file
+running tests...
+used time: Finished in 40.33 seconds
+Failing tests: 0
+Can independently fix []
+Could not fix independently
+processed: 111
+Find 2 new bugs

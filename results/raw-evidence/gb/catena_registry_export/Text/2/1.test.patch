@@ -1,0 +1,10 @@
+{
+    "org.apache.commons.text.WordUtilsTest::testCapitalizeFully_Text88": {
+        "begin_line_no": 231,
+        "end_line_no": 234,
+        "file_path": "src/test/java/org/apache/commons/text/WordUtilsTest.java",
+        "to": [
+            ""
+        ]
+    }
+}

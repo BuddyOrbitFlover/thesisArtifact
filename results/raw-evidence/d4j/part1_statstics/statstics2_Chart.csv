@@ -1,0 +1,2 @@
+bug_id, category, num_divided_into_single_hunk, num_divided_into_multi_hunk, hunks_multi_hunk, hunks_multi_hunk_ci, num_of_hunks, num_of_hunks_ci
+STATSTICS, No_data=0, Divisible=0, Indivisible=0, Isolated=0, Single_divided=0, Hunks_total=0, Hunks_total_ci=0

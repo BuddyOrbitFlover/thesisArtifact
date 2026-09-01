@@ -1,0 +1,12 @@
+{
+    "num_of_hunks": 1,
+    "0": {
+        "file_name": "src/main/java/org/apache/bcel/generic/Type.java",
+        "from_line_no": 219,
+        "to_line_no": 224,
+        "replaced_with": "            String parsedSignature = Utility.signatureToString(signature, false);\n            wrap(consumed_chars, parsedSignature.length() + 2); // \"Lblabla;\" `L' and `;' are removed\n            return ObjectType.getInstance(parsedSignature.replace('/', '.'));\n",
+        "replaced": "            int index = signature.indexOf(';'); // Look for closing `;'\n            if (index < 0) {\n                throw new ClassFormatException(\"Invalid signature: \" + signature);\n            }\n            wrap(consumed_chars, index + 1); // \"Lblabla;\" `L' and `;' are removed\n            return ObjectType.getInstance(signature.substring(1, index).replace('/', '.'));\n",
+        "patch_type": "replace",
+        "next_line_no": 225
+    }
+}

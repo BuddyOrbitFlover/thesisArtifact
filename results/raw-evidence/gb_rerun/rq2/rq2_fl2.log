@@ -1,0 +1,43 @@
+=== Johnzon_core_4_1 (proj=Johnzon_core bid=4 cid=1) Tue Jul 14 14:52:21 PDT 2026 ===
+wrote 1197 components
+Johnzon_core_4_1: failing_tests=19 nonzero=314 ranking_lines=1197
+=== Johnzon_core_4_2 (proj=Johnzon_core bid=4 cid=2) Tue Jul 14 14:52:39 PDT 2026 ===
+wrote 1197 components
+Johnzon_core_4_2: failing_tests=19 nonzero=314 ranking_lines=1197
+=== AaltoXml_9_2 (proj=AaltoXml bid=9 cid=2) Tue Jul 14 14:52:57 PDT 2026 ===
+wrote 8959 components
+AaltoXml_9_2: failing_tests=8 nonzero=972 ranking_lines=8959
+=== Woodstox_6_1 (proj=Woodstox bid=6 cid=1) Tue Jul 14 14:53:42 PDT 2026 ===
+wrote 7283 components
+Woodstox_6_1: failing_tests=40 nonzero=869 ranking_lines=7283
+=== Jcabi_log_4_1 (proj=Jcabi_log bid=4 cid=1) Tue Jul 14 14:56:00 PDT 2026 ===
+wrote 118 components
+Jcabi_log_4_1: failing_tests=1 nonzero=17 ranking_lines=118
+=== Jcabi_log_4_2 (proj=Jcabi_log bid=4 cid=2) Tue Jul 14 14:57:09 PDT 2026 ===
+wrote 118 components
+Jcabi_log_4_2: failing_tests=1 nonzero=17 ranking_lines=118
+=== Dagger_core_3_1 (proj=Dagger_core bid=3 cid=1) Tue Jul 14 14:58:17 PDT 2026 ===
+wrote 710 components
+Dagger_core_3_1: failing_tests=2 nonzero=341 ranking_lines=710
+=== Dagger_core_3_2 (proj=Dagger_core bid=3 cid=2) Tue Jul 14 14:58:39 PDT 2026 ===
+wrote 710 components
+Dagger_core_3_2: failing_tests=2 nonzero=341 ranking_lines=710
+=== Dagger_core_17_1 (proj=Dagger_core bid=17 cid=1) Tue Jul 14 14:59:01 PDT 2026 ===
+wrote 713 components
+Dagger_core_17_1: failing_tests=1 nonzero=278 ranking_lines=713
+=== Google_java_format_core_1_2 (proj=Google_java_format_core bid=1 cid=2) Tue Jul 14 14:59:24 PDT 2026 ===
+wrote 4063 components
+Google_java_format_core_1_2: failing_tests=1 nonzero=1040 ranking_lines=4063
+=== RTree_4_1 (proj=RTree bid=4 cid=1) Tue Jul 14 15:02:50 PDT 2026 ===
+wrote 680 components
+RTree_4_1: failing_tests=1 nonzero=328 ranking_lines=680
+=== Proj4J_6_3 (proj=Proj4J bid=6 cid=3) Tue Jul 14 15:04:22 PDT 2026 ===
+wrote 5065 components
+Proj4J_6_3: failing_tests=1 nonzero=778 ranking_lines=5065
+=== Proj4J_6_4 (proj=Proj4J bid=6 cid=4) Tue Jul 14 15:06:39 PDT 2026 ===
+wrote 5065 components
+Proj4J_6_4: failing_tests=1 nonzero=710 ranking_lines=5065
+=== Disklrucache_2_1 (proj=Disklrucache bid=2 cid=1) Tue Jul 14 15:08:58 PDT 2026 ===
+wrote 351 components
+Disklrucache_2_1: failing_tests=1 nonzero=122 ranking_lines=351
+=== RQ2-RERUN FL DONE Tue Jul 14 15:09:16 PDT 2026 ===

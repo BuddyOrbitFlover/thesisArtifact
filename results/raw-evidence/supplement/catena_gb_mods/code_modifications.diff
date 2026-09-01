@@ -1,0 +1,79 @@
+diff --git a/scripts/construct_database/check_out_projects.py b/scripts/construct_database/check_out_projects.py
+index e41d2b7..87ac39e 100644
+--- a/scripts/construct_database/check_out_projects.py
++++ b/scripts/construct_database/check_out_projects.py
+@@ -6,7 +6,7 @@ with open(sys.argv[1], 'r') as f:
+     waitlist = f.read().splitlines()
+ 
+ def task(bugid):
+-    bugid = bugid.split(':')[0].split('_')
++    bugid = bugid.split(':')[0].rsplit('_', 1)
+     try:
+         finished = subprocess.run(['defects4j', 'checkout', '-p', bugid[0], '-v', '{}b'.format(bugid[1]), '-w', '{}/{}_{}'.format(sys.argv[2], bugid[0], bugid[1])], capture_output=True)
+         finished.check_returncode()
+@@ -22,4 +22,4 @@ def task(bugid):
+             f.write(finished.stdout.decode("utf-8"))
+             f.write(finished.stderr.decode("utf-8"))
+ 
+-joblib.Parallel(n_jobs=14)(joblib.delayed(task)(i) for i in tqdm.tqdm(waitlist))
++joblib.Parallel(n_jobs=6)(joblib.delayed(task)(i) for i in tqdm.tqdm(waitlist))
+diff --git a/scripts/construct_database/export_metadata.py b/scripts/construct_database/export_metadata.py
+index d68c1f8..97ea5db 100644
+--- a/scripts/construct_database/export_metadata.py
++++ b/scripts/construct_database/export_metadata.py
+@@ -42,6 +42,6 @@ def task(bugid, props, root):
+         res  = res.splitlines()
+         root[bugid][prop] = res
+ _root = mp.Manager().dict()
+-joblib.Parallel(n_jobs=14)(joblib.delayed(task)(i, _props, _root) for i in tqdm.tqdm(waitlist))
++joblib.Parallel(n_jobs=6)(joblib.delayed(task)(i, _props, _root) for i in tqdm.tqdm(waitlist))
+ with open('./d4j_export/database.json', 'w') as f:
+     f.write(json.dumps(_root.copy(), indent=4))
+diff --git a/scripts/generate_bugs/export.py b/scripts/generate_bugs/export.py
+index a94a83e..6dae554 100644
+--- a/scripts/generate_bugs/export.py
++++ b/scripts/generate_bugs/export.py
+@@ -123,7 +123,7 @@ def main():
+         name = t[0]
+         if name == 'data':
+             continue
+-        proj = name.split('_')
++        proj = name.rsplit('_', 1)
+         bid = proj[1]
+         proj = proj[0]
+         num = check_log(t[1])
+diff --git a/scripts/generate_bugs/run.py b/scripts/generate_bugs/run.py
+index 63542a8..675a90c 100644
+--- a/scripts/generate_bugs/run.py
++++ b/scripts/generate_bugs/run.py
+@@ -30,7 +30,7 @@ def task(bug_id, info, method):
+             raise Exception(f'{bug_id} would run forever with parallel')
+         info = info[bug_id]
+         method = method[bug_id]
+-        bug_id = bug_id.split('_')
++        bug_id = bug_id.rsplit('_', 1)
+         with open('{}/{}/{}.json'.format(PATCHES, bug_id[0], bug_id[1]), 'r') as f:
+             patch = json.load(f)
+         generator = runner.Generator(bug_id[0], bug_id[1])
+diff --git a/scripts/generate_bugs/statstics/statstics.py b/scripts/generate_bugs/statstics/statstics.py
+index 60f15af..eef33a7 100644
+--- a/scripts/generate_bugs/statstics/statstics.py
++++ b/scripts/generate_bugs/statstics/statstics.py
+@@ -112,7 +112,7 @@ def parse_all_statstic2():
+         tp = data[name]
+         log = tp[0]
+         nbn = new_bugs_num(log)
+-        name_arr = name.split('_')
++        name_arr = name.rsplit('_', 1)
+         with open(f'{patches_ci}{name_arr[0]}/{name_arr[1]}.json', 'r') as f:
+             pci = json.load(f)
+         total_hunks += pci['num_of_hunks']
+@@ -177,7 +177,7 @@ def parse_all_statstic2_name(pname):
+         if not pname in name:
+             continue
+         tp = data[name]
+-        name_arr = name.split('_')
++        name_arr = name.rsplit('_', 1)
+         with open(f'{patches_ci}{name_arr[0]}/{name_arr[1]}.json', 'r') as f:
+             pci = json.load(f)
+         total_hunks += pci['num_of_hunks']

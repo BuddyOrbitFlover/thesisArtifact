@@ -1,0 +1,98 @@
+---
+Begin generate bug_id: Text_5
+num_of_hunks: 4
+timeout for running: 3600
+use working dir: ./working/data/Text_5
+Try to checkout Text_5
+build dir: ['target/classes', 'target/test-classes']
+init FileManager
+trace file: src/main/java/org/apache/commons/text/ExtendedMessageFormat.java
+trying to replace old failing tests
+edit: replace from 107 range 7 at src/test/java/org/apache/commons/text/ExtendedMessageFormatTest.java
+to
+    @Test
+    public void testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_0() {
+        final String pattern2 = "Message with choice format element with quote just before brace end ''{0,choice,0#0|0<'1'}''";
+        final ExtendedMessageFormat emf = new ExtendedMessageFormat(pattern2, registry);
+        assertEquals("Message with choice format element with quote just before brace end '0'", emf.format(new Object[] {0}));         /***** ORIGINAL ASSERTION IS HERE *****/
+        try{ assertEquals("Message with choice format element with quote just before brace end '1'", emf.format(new Object[] {1}));    }catch(Throwable __SHOULD_BE_IGNORED){}
+    }     @Test
+    public void testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_1() {
+        final String pattern2 = "Message with choice format element with quote just before brace end ''{0,choice,0#0|0<'1'}''";
+        final ExtendedMessageFormat emf = new ExtendedMessageFormat(pattern2, registry);
+        try{ assertEquals("Message with choice format element with quote just before brace end '0'", emf.format(new Object[] {0}));    }catch(Throwable __SHOULD_BE_IGNORED){}
+        assertEquals("Message with choice format element with quote just before brace end '1'", emf.format(new Object[] {1}));         /***** ORIGINAL ASSERTION IS HERE *****/
+    }
+trace file: src/test/java/org/apache/commons/text/ExtendedMessageFormatTest.java
+new test num: 2
+ori test num: 0
+pattern: 0000
+patches are written to file
+running tests...
+used time: Finished in 8.11 seconds
+Failing tests: 2
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_0
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_1
+processed: 0000
+pattern: 0001
+try to fix hunk: 3
+insert before 429 with                 next(pos);
+
+patches are written to file
+running tests...
+used time: Finished in 7.98 seconds
+Failing tests: 5
+	org.apache.commons.text.ExtendedMessageFormatTest::testEqualsHashcode
+	org.apache.commons.text.ExtendedMessageFormatTest::testEscapedQuote_LANG_477
+	org.apache.commons.text.ExtendedMessageFormatTest::testEmbeddedPatternInChoice
+	org.apache.commons.text.ExtendedMessageFormatTest::testExtendedFormats
+	org.apache.commons.text.ExtendedMessageFormatTest::testExtendedAndBuiltInFormats
+Includes new failing tests, set to unusable
+processed: 0001
+pattern: 0010
+try to fix hunk: 2
+insert before 424 with                 next(pos);
+
+patches are written to file
+running tests...
+used time: Finished in 7.96 seconds
+Failing tests: 3
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_0
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_1
+	org.apache.commons.text.ExtendedMessageFormatTest::testEmbeddedPatternInChoice
+Includes new failing tests, set to unusable
+processed: 0010
+pattern: 0100
+try to fix hunk: 1
+insert before 418 with                 next(pos);
+
+patches are written to file
+running tests...
+used time: Finished in 7.91 seconds
+Failing tests: 2
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_0
+	org.apache.commons.text.ExtendedMessageFormatTest::testChoiceQuoteJustBeforeBraceEnd_TEXT_106$catena_1
+No new failing tests but only 1 hunk
+processed: 0100
+pattern: 1000
+try to fix hunk: 0
+replace from 414 with range 1 to
+        while (pos.getIndex() < pattern.length()) {
+
+patches are written to file
+running tests...
+EXCEPTION: tests time out
+EXCEPTION: Inside Exception tests time out
+Traceback (most recent call last):
+  File "run.py", line 41, in task
+    generator.run()
+  File "/catena/scripts/generate_bugs/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/catena/scripts/generate_bugs/runner.py", line 85, in run
+    self._run()
+  File "/catena/scripts/generate_bugs/runner.py", line 111, in _run
+    self.taskSingleHunk(task)
+  File "/catena/scripts/generate_bugs/runner.py", line 154, in taskSingleHunk
+    raise TimeoutError("tests time out")
+TimeoutError: tests time out
+

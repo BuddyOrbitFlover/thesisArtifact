@@ -1,0 +1,7 @@
+org.apache.commons.text.similarity.JaroWinklerDistanceTest::testGetJaroWinklerDistance_StringString$catena_2
+org.apache.commons.text.similarity.JaroWinklerDistanceTest::testGetJaroWinklerDistance_StringString$catena_7
+org.apache.commons.text.similarity.JaroWinklerDistanceTest::testGetJaroWinklerDistance_StringString$catena_0
+org.apache.commons.text.similarity.JaroWinklerDistanceTest::testGetJaroWinklerDistance_StringString$catena_6
+org.apache.commons.text.similarity.JaroWinklerDistanceTest::testGetJaroWinklerDistance_StringString$catena_3
+org.apache.commons.text.similarity.JaroWinklerDistanceTest::testGetJaroWinklerDistance_StringString$catena_4
+org.apache.commons.text.similarity.JaroWinklerDistanceTest::testGetJaroWinklerDistance_StringString$catena_5

@@ -1,0 +1,2 @@
+Failing tests: 1
+  - org.jfree.graphics2d.TestGraphics2D::drawImageWithNullTransform

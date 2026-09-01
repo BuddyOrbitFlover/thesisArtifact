@@ -1,0 +1,54 @@
+{
+    "original": {
+        "num_of_hunks": 4,
+        "0": {
+            "file_name": "src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java",
+            "replaced_with": "        if (xform != null) {\n",
+            "patch_type": "insert",
+            "next_line_no": 2572
+        },
+        "1": {
+            "file_name": "src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java",
+            "replaced_with": "        }\n",
+            "patch_type": "insert",
+            "next_line_no": 2573
+        },
+        "2": {
+            "file_name": "src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java",
+            "replaced_with": "        if (xform != null) {\n",
+            "patch_type": "insert",
+            "next_line_no": 2574
+        },
+        "3": {
+            "file_name": "src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java",
+            "replaced_with": "        }\n",
+            "patch_type": "insert",
+            "next_line_no": 2575
+        }
+    },
+    "method": {
+        "failing_tests": [
+            "org.jfree.graphics2d.TestGraphics2D::drawImageWithNullTransform"
+        ],
+        "org.jfree.graphics2d.TestGraphics2D::drawImageWithNullTransform": {
+            "file_path": "src/test/java/org/jfree/graphics2d/TestGraphics2D.java",
+            "Instance": "Begin: Pos(735, 5)\nEnd: Pos(740, 5)\nSource: /tmp/Jfreesvg_1/src/test/java//org/jfree/graphics2d/TestGraphics2D.java\nName: drawImageWithNullTransform\nChilds: [StatementAssertion<Begin: Pos(739, 9), End: Pos(739, 25)>,\n]",
+            "source": "/tmp/Jfreesvg_1/src/test/java//org/jfree/graphics2d/TestGraphics2D.java",
+            "name": "drawImageWithNullTransform",
+            "begin": "Pos(735, 5)",
+            "end": "Pos(740, 5)",
+            "begin_line_no": 735,
+            "end_line_no": 740,
+            "child": [
+                "Begin: Pos(739, 9)\nEnd: Pos(739, 25)\nSource: StatementExpression\nName: <Unknown>\nChilds: []"
+            ],
+            "splited": [],
+            "func": {}
+        }
+    },
+    "1100": {
+        "failing_tests": [
+            "org.jfree.graphics2d.TestGraphics2D::drawImageWithNullTransform"
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "patch": [
+        {
+            "file_name": "src/main/java/org/apache/commons/text/similarity/JaroWinklerDistance.java",
+            "from_line_no": 91,
+            "to_line_no": 91,
+            "replaced_with": "        return jw;\n",
+            "replaced": "        return Math.round(jw * percentageRoundValue) / percentageRoundValue;\n",
+            "patch_type": "replace",
+            "next_line_no": 92
+        }
+    ]
+}

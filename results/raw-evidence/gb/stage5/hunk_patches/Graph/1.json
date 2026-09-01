@@ -1,0 +1,88 @@
+{
+    "num_of_hunks": 11,
+    "0": {
+        "file_name": "src/main/java/org/apache/commons/graph/coloring/GraphColoring.java",
+        "replaced_with": "import java.util.ArrayList;\n",
+        "patch_type": "insert",
+        "next_line_no": 3
+    },
+    "1": {
+        "file_name": "src/main/java/org/apache/commons/graph/coloring/GraphColoring.java",
+        "replaced_with": "import java.util.List;\n",
+        "patch_type": "insert",
+        "next_line_no": 4
+    },
+    "2": {
+        "file_name": "src/main/java/org/apache/commons/graph/coloring/GraphColoring.java",
+        "from_line_no": 53,
+        "to_line_no": 53,
+        "replaced": "        int currrentColorIndex = 0;\n",
+        "patch_type": "delete",
+        "next_line_no": 54
+    },
+    "3": {
+        "file_name": "src/main/java/org/apache/commons/graph/coloring/GraphColoring.java",
+        "from_line_no": 56,
+        "to_line_no": 56,
+        "replaced_with": "        for ( int currentColorIndex = 0; it.hasNext(); currentColorIndex++ )\n",
+        "replaced": "        while ( it.hasNext() )\n",
+        "patch_type": "replace",
+        "next_line_no": 57
+    },
+    "4": {
+        "file_name": "src/main/java/org/apache/commons/graph/coloring/GraphColoring.java",
+        "from_line_no": 59,
+        "to_line_no": 59,
+        "replaced_with": "            it.next();\n",
+        "replaced": "            V v = it.next();\n",
+        "patch_type": "replace",
+        "next_line_no": 60
+    },
+    "5": {
+        "file_name": "src/main/java/org/apache/commons/graph/coloring/GraphColoring.java",
+        "from_line_no": 62,
+        "to_line_no": 63,
+        "replaced_with": "            List<V> currentColorVertices = new ArrayList<V>();\n            Iterator<V> uncoloredVtxIterator = uncoloredOrderedVertices.iterator();\n            while ( uncoloredVtxIterator.hasNext() )\n            {\n                V uncoloredVtx = uncoloredVtxIterator.next();\n",
+        "replaced": "            it.remove();\n            coloredVertices.addColor( v, currrentColorIndex );\n",
+        "patch_type": "replace",
+        "next_line_no": 64
+    },
+    "6": {
+        "file_name": "src/main/java/org/apache/commons/graph/coloring/GraphColoring.java",
+        "replaced_with": "                boolean foundAnAdjacentVertex = false;\n                for ( V currentColoredVtx : currentColorVertices )\n                {\n                    if ( g.getEdge( currentColoredVtx, uncoloredVtx ) != null )\n                    {\n",
+        "patch_type": "insert",
+        "next_line_no": 65
+    },
+    "7": {
+        "file_name": "src/main/java/org/apache/commons/graph/coloring/GraphColoring.java",
+        "from_line_no": 66,
+        "to_line_no": 70,
+        "replaced_with": "                        foundAnAdjacentVertex = true;\n                        break;\n                    }\n                }\n\n                if ( !foundAnAdjacentVertex )\n",
+        "replaced": "            Iterator<V> it2 = uncoloredOrderedVertices.iterator();\n            while ( it2.hasNext() )\n            {\n                V v2 = it2.next();\n                if ( g.getEdge( v, v2 ) == null )\n",
+        "patch_type": "replace",
+        "next_line_no": 71
+    },
+    "8": {
+        "file_name": "src/main/java/org/apache/commons/graph/coloring/GraphColoring.java",
+        "from_line_no": 74,
+        "to_line_no": 75,
+        "replaced_with": "                    uncoloredVtxIterator.remove();\n                    coloredVertices.addColor( uncoloredVtx, currentColorIndex );\n                    currentColorVertices.add( uncoloredVtx );\n",
+        "replaced": "                    it2.remove();\n                    coloredVertices.addColor( v2, currrentColorIndex );\n",
+        "patch_type": "replace",
+        "next_line_no": 76
+    },
+    "9": {
+        "file_name": "src/main/java/org/apache/commons/graph/coloring/GraphColoring.java",
+        "from_line_no": 80,
+        "to_line_no": 80,
+        "replaced": "            currrentColorIndex++;\n",
+        "patch_type": "delete",
+        "next_line_no": 81
+    },
+    "10": {
+        "file_name": "src/main/java/org/apache/commons/graph/coloring/UncoloredOrderedVertices.java",
+        "replaced_with": "    public int size()\n    {\n        return orderedVertices.size();\n    }\n",
+        "patch_type": "insert",
+        "next_line_no": 119
+    }
+}

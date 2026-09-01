@@ -1,0 +1,27 @@
+{
+    "num_of_hunks": 4,
+    "0": {
+        "file_name": "src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java",
+        "replaced_with": "        if (xform != null) {\n",
+        "patch_type": "insert",
+        "next_line_no": 2572
+    },
+    "1": {
+        "file_name": "src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java",
+        "replaced_with": "        }\n",
+        "patch_type": "insert",
+        "next_line_no": 2573
+    },
+    "2": {
+        "file_name": "src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java",
+        "replaced_with": "        if (xform != null) {\n",
+        "patch_type": "insert",
+        "next_line_no": 2574
+    },
+    "3": {
+        "file_name": "src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java",
+        "replaced_with": "        }\n",
+        "patch_type": "insert",
+        "next_line_no": 2575
+    }
+}

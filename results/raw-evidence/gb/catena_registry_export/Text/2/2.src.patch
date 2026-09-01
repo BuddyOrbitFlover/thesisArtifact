@@ -1,0 +1,22 @@
+{
+    "patch": [
+        {
+            "file_name": "src/main/java/org/apache/commons/text/WordUtils.java",
+            "from_line_no": 414,
+            "to_line_no": 415,
+            "replaced_with": "        if (StringUtils.isEmpty(str)) {\n",
+            "replaced": "        final int delimLen = delimiters == null ? -1 : delimiters.length;\n        if (StringUtils.isEmpty(str) || delimLen == 0) {\n",
+            "patch_type": "replace",
+            "next_line_no": 416
+        },
+        {
+            "file_name": "src/main/java/org/apache/commons/text/WordUtils.java",
+            "from_line_no": 493,
+            "to_line_no": 494,
+            "replaced_with": "        if (StringUtils.isEmpty(str)) {\n",
+            "replaced": "        final int delimLen = delimiters == null ? -1 : delimiters.length;\n        if (StringUtils.isEmpty(str) || delimLen == 0) {\n",
+            "patch_type": "replace",
+            "next_line_no": 495
+        }
+    ]
+}

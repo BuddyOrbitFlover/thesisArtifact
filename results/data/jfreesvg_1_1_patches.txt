@@ -1,0 +1,246 @@
+     * 
+     * @return {@code true} if the image is drawn. 
+     */
+    @Override
+    public boolean drawImage(Image img, AffineTransform xform, 
+            ImageObserver obs) {
+        AffineTransform savedTransform = getTransform();
+            transform(xform);
+        boolean result = drawImage(img, 0, 0, obs);
+            setTransform(savedTransform);
+        return result;
+    }
+
+    /**
+===== MethodInvocationMutator_FixedBugs/Patch_138_71.txt
+diff --git a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+index cab2afd..e2732a9 100644
+--- a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
++++ b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+@@ -2569,7 +2569,7 @@ public final class SVGGraphics2D extends Graphics2D {
+     public boolean drawImage(Image img, AffineTransform xform, 
+             ImageObserver obs) {
+         AffineTransform savedTransform = getTransform();
+-            transform(xform);
++            setTransform(xform);
+         boolean result = drawImage(img, 0, 0, obs);
+             setTransform(savedTransform);
+         return result;
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class
+index 19aef33..f408301 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class and b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class differ
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class
+index 76a8f21..bd1a2f0 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class and b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class differ
+===== NullPointerChecker_FixedBugs/Patch_194_76.txt
+diff --git a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+index cab2afd..8f1da3d 100644
+--- a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
++++ b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+@@ -2569,7 +2569,10 @@ public final class SVGGraphics2D extends Graphics2D {
+     public boolean drawImage(Image img, AffineTransform xform, 
+             ImageObserver obs) {
+         AffineTransform savedTransform = getTransform();
+-            transform(xform);
++            if (xform != null) {
++	transform(xform);
++	}
++
+         boolean result = drawImage(img, 0, 0, obs);
+             setTransform(savedTransform);
+         return result;
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class
+index 19aef33..7d23145 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class and b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class differ
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class
+index 76a8f21..bd1a2f0 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class and b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class differ
+===== NullPointerChecker_FixedBugs/Patch_196_78.txt
+diff --git a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+index cab2afd..083ac4c 100644
+--- a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
++++ b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+@@ -2569,7 +2569,10 @@ public final class SVGGraphics2D extends Graphics2D {
+     public boolean drawImage(Image img, AffineTransform xform, 
+             ImageObserver obs) {
+         AffineTransform savedTransform = getTransform();
+-            transform(xform);
++            if (xform == null) {
++	    return false;
++	}
++transform(xform);
+         boolean result = drawImage(img, 0, 0, obs);
+             setTransform(savedTransform);
+         return result;
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class
+index 19aef33..7e1b463 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class and b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class differ
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class
+index 76a8f21..bd1a2f0 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class and b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class differ
+===== NullPointerChecker_FixedBugs/Patch_197_79.txt
+diff --git a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+index cab2afd..f2cbd26 100644
+--- a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
++++ b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+@@ -2569,7 +2569,10 @@ public final class SVGGraphics2D extends Graphics2D {
+     public boolean drawImage(Image img, AffineTransform xform, 
+             ImageObserver obs) {
+         AffineTransform savedTransform = getTransform();
+-            transform(xform);
++            if (xform == null) {
++	    return true;
++	}
++transform(xform);
+         boolean result = drawImage(img, 0, 0, obs);
+             setTransform(savedTransform);
+         return result;
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class
+index 19aef33..cddef18 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class and b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class differ
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class
+index 76a8f21..bd1a2f0 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class and b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class differ
+===== NullPointerChecker_FixedBugs/Patch_198_80.txt
+diff --git a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+index cab2afd..339a8f2 100644
+--- a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
++++ b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+@@ -2569,7 +2569,8 @@ public final class SVGGraphics2D extends Graphics2D {
+     public boolean drawImage(Image img, AffineTransform xform, 
+             ImageObserver obs) {
+         AffineTransform savedTransform = getTransform();
+-            transform(xform);
++            if (xform == null) xform = savedTransform;
++ transform(xform);
+         boolean result = drawImage(img, 0, 0, obs);
+             setTransform(savedTransform);
+         return result;
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class
+index 19aef33..6b21091 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class and b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class differ
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class
+index 76a8f21..bd1a2f0 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class and b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class differ
+===== NullPointerChecker_FixedBugs/Patch_199_81.txt
+diff --git a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+index cab2afd..ec6d7c7 100644
+--- a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
++++ b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+@@ -2569,7 +2569,8 @@ public final class SVGGraphics2D extends Graphics2D {
+     public boolean drawImage(Image img, AffineTransform xform, 
+             ImageObserver obs) {
+         AffineTransform savedTransform = getTransform();
+-            transform(xform);
++            if (xform == null) xform = this.transform;
++ transform(xform);
+         boolean result = drawImage(img, 0, 0, obs);
+             setTransform(savedTransform);
+         return result;
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class
+index 19aef33..3130ed8 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class and b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class differ
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class
+index 76a8f21..bd1a2f0 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class and b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class differ
+===== NullPointerChecker_FixedBugs/Patch_200_82.txt
+diff --git a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+index cab2afd..864f6a6 100644
+--- a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
++++ b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+@@ -2569,7 +2569,8 @@ public final class SVGGraphics2D extends Graphics2D {
+     public boolean drawImage(Image img, AffineTransform xform, 
+             ImageObserver obs) {
+         AffineTransform savedTransform = getTransform();
+-            transform(xform);
++            if (xform == null) xform = new AffineTransform();
++ transform(xform);
+         boolean result = drawImage(img, 0, 0, obs);
+             setTransform(savedTransform);
+         return result;
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class
+index 19aef33..e238cf8 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class and b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class differ
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class
+index 76a8f21..bd1a2f0 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class and b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class differ
+===== StatementRemover_FixedBugs/Patch_205_86.txt
+diff --git a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+index cab2afd..b00c236 100644
+--- a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
++++ b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+@@ -2569,7 +2569,7 @@ public final class SVGGraphics2D extends Graphics2D {
+     public boolean drawImage(Image img, AffineTransform xform, 
+             ImageObserver obs) {
+         AffineTransform savedTransform = getTransform();
+-            transform(xform);
++            
+         boolean result = drawImage(img, 0, 0, obs);
+             setTransform(savedTransform);
+         return result;
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class
+index 19aef33..985a212 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class and b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class differ
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class
+index 76a8f21..bd1a2f0 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class and b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class differ
+===== VariableReplacer_FixedBugs/Patch_153_73.txt
+diff --git a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+index cab2afd..32845f2 100644
+--- a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
++++ b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+@@ -2569,7 +2569,7 @@ public final class SVGGraphics2D extends Graphics2D {
+     public boolean drawImage(Image img, AffineTransform xform, 
+             ImageObserver obs) {
+         AffineTransform savedTransform = getTransform();
+-            transform(xform);
++            transform(this.transform);
+         boolean result = drawImage(img, 0, 0, obs);
+             setTransform(savedTransform);
+         return result;
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class
+index 19aef33..5047b88 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class and b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class differ
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class
+index 76a8f21..bd1a2f0 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class and b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class differ
+===== VariableReplacer_FixedBugs/Patch_154_74.txt
+diff --git a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+index cab2afd..e63e1d6 100644
+--- a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
++++ b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+@@ -2569,7 +2569,7 @@ public final class SVGGraphics2D extends Graphics2D {
+     public boolean drawImage(Image img, AffineTransform xform, 
+             ImageObserver obs) {
+         AffineTransform savedTransform = getTransform();
+-            transform(xform);
++            transform(savedTransform);
+         boolean result = drawImage(img, 0, 0, obs);
+             setTransform(savedTransform);
+         return result;
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class
+index 19aef33..68182b5 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class and b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class differ
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class
+index 76a8f21..bd1a2f0 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class and b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class differ
+===== VariableReplacer_FixedBugs/Patch_184_75.txt
+diff --git a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+index cab2afd..aea9dd3 100644
+--- a/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
++++ b/src/main/java/org/jfree/graphics2d/svg/SVGGraphics2D.java
+@@ -2569,7 +2569,7 @@ public final class SVGGraphics2D extends Graphics2D {
+     public boolean drawImage(Image img, AffineTransform xform, 
+             ImageObserver obs) {
+         AffineTransform savedTransform = getTransform();
+-            transform(xform);
++            transform(getTransform());
+         boolean result = drawImage(img, 0, 0, obs);
+             setTransform(savedTransform);
+         return result;
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class
+index 19aef33..37230d6 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class and b/target/classes/org/jfree/graphics2d/svg/SVGGraphics2D.class differ
+diff --git a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class
+index 76a8f21..bd1a2f0 100644
+Binary files a/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class and b/target/classes/org/jfree/graphics2d/svg/SVGHints$Key.class differ

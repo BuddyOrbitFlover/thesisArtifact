@@ -1,0 +1,64 @@
+#!/bin/bash
+# growingBugs module-layout auto-heal (v4, 2026-08-11).
+# v2: root src -> <module>/src symlink after checkout.
+# v3: when root src EXISTS (Apache site resources — Tika/Johnzon/Shiro),
+#     link src/main and src/test inside it instead (pilot's Rdf_jena pattern).
+# v4: +13 S5 module projects (paths probed from checkouts via classes.modified,
+#     2026-08-11; all plain-symlink cases, no root-src conflicts).
+# v5: re-copy shipped generated_sources/PackageVersion.java after the symlink
+#     for the two Jackson dataformat modules — their .pm post-checkout copies
+#     it to root src/ with a silent-failure File::Copy (no `or die`), which
+#     loses it on module layouts (compile then fails on PackageVersion).
+/gb/framework/bin/defects4j "$@"
+rc=$?
+if [ "$1" = "checkout" ]; then
+  w=""; p=""; args=("$@")
+  for ((j=1;j<${#args[@]};j++)); do
+    [ "${args[$j]}" = "-w" ] && w="${args[$((j+1))]}"
+    [ "${args[$j]}" = "-p" ] && p="${args[$((j+1))]}"
+  done
+  MOD=""
+  case "$p" in
+    Jimfs) MOD="jimfs";;
+    Tika_core) MOD="tika-core";;
+    Wicket_core) MOD="wicket-core";;
+    Johnzon_core) MOD="johnzon-core";;
+    Shiro_core) MOD="core";;
+    Rdf4j_rio_turtle) MOD="core/rio/turtle";;
+    Dagger_core) MOD="core";;
+    Google_java_format_core) MOD="core";;
+    Tape) MOD="tape";;
+    Fluo_api) MOD="modules/api";;
+    Gson) MOD="gson";;
+    JacksonDataformatBinary_avro) MOD="avro";;
+    JacksonDataformatsText_properties) MOD="properties";;
+    Jackson_datatype_hibernate4) MOD="hibernate4";;
+    Jnagmp) MOD="jnagmp";;
+    Rdf4j_query) MOD="core/query";;
+    Rdf4j_rio_api) MOD="core/rio/api";;
+    Rdf4j_rio_jsonld) MOD="core/rio/jsonld";;
+    Rdf4j_rio_rdfjson) MOD="core/rio/rdfjson";;
+    Rdf4j_rio_rdfxml) MOD="core/rio/rdfxml";;
+    Rocketmq_mqtt_cs) MOD="mqtt-cs";;
+    Rocketmq_mqtt_ds) MOD="mqtt-ds";;
+  esac
+  if [ -n "$MOD" ] && [ -n "$w" ] && [ -d "$w/$MOD/src" ]; then
+    if [ ! -e "$w/src" ]; then
+      ln -s "$MOD/src" "$w/src"
+    else
+      [ -e "$w/src/main" ] || ln -s "../$MOD/src/main" "$w/src/main"
+      [ -e "$w/src/test" ] || ln -s "../$MOD/src/test" "$w/src/test"
+    fi
+  fi
+  GEN=""
+  case "$p" in
+    JacksonDataformatBinary_avro) GEN="com/fasterxml/jackson/dataformat/avro";;
+    JacksonDataformatsText_properties) GEN="com/fasterxml/jackson/dataformat/javaprop";;
+  esac
+  if [ -n "$GEN" ] && [ -n "$w" ] && [ -f "/gb/framework/projects/$p/generated_sources/PackageVersion.java" ]; then
+    d="$w/src/main/java/$GEN"
+    [ -d "$d" ] && [ ! -f "$d/PackageVersion.java" ] && \
+      cp "/gb/framework/projects/$p/generated_sources/PackageVersion.java" "$d/"
+  fi
+fi
+exit $rc

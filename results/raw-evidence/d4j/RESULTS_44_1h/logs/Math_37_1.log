@@ -1,0 +1,44 @@
+Checking out 65ed08e1 to /root/wk_0/D4J/projects/Math_37................... OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 65ed08e1:de147e5c..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Math-37b........................................ OK
+CatenaD4j# Tracing test files.............................................. Finished
+CatenaD4j# Applying test patch............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Buggy program version checked out for Math-37b1................. Finished
+CatenaD4j# Commit BUGGY version............................................ Finished
+CatenaD4j# Tag BUGGY version............................................... Finished
+CatenaD4j# Initialize BUGGY version........................................ Finished
+CatenaD4j# Tracing src files............................................... Finished
+CatenaD4j# Applying src patch.............................................. Finished
+CatenaD4j# Write to file................................................... Finished
+CatenaD4j# Fixed program version checked out for Math-37f1................. Finished
+CatenaD4j# Commit FIXED version............................................ Finished
+CatenaD4j# Tag FIXED version............................................... Finished
+CatenaD4j# Initialize FIXED version........................................ Finished
+CatenaD4j# Check out BUGGY version......................................... Finished
+CatenaD4j# Clean files..................................................... Finished
+CatenaD4j# Tasks all done.................................................. Finished
+Reinitialized existing Git repository in /root/wk_0/D4J/projects/Math_37/.git/
+Math_37_1
+Math
+37
+1
+write_dir:/root/wk_0/D4J/projects/Math_37
+execute================catena4j checkout -p Math -v 37b1 -w /root/wk_0/D4J/projects/Math_37
+命令为：cd /root/wk_0/D4J/projects/Math_37 && defects4j compile
+命令为：cd /root/wk_0/D4J/projects/Math_37 && defects4j test
+命令为：cd /root/wk_0 && ./NormalFLTBarRunner.sh /root/wk_0/D4J/projects/ Math_37 /root/defects4j/
+Traceback (most recent call last):
+  File "runTBarForCatenaD4J.py", line 130, in <module>
+    patch_output_dirlist = os.listdir(patch_output_root)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/wk_0/OUTPUT/NormalFL/TBar'

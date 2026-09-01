@@ -1,0 +1,2 @@
+org.apache.commons.graph.model.BaseMutableGraphTestCase::testDirectedGraphRemoveEdge
+org.apache.commons.graph.model.BaseMutableGraphTestCase::testUndirectedGraphRemoveEdge

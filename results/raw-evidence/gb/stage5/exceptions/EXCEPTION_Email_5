@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "run.py", line 41, in task
+    generator.run()
+  File "/catena/scripts/generate_bugs/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/catena/scripts/generate_bugs/runner.py", line 85, in run
+    self._run()
+  File "/catena/scripts/generate_bugs/runner.py", line 111, in _run
+    self.taskSingleHunk(task)
+  File "/catena/scripts/generate_bugs/runner.py", line 159, in taskSingleHunk
+    raise Exception('task should end')
+Exception: task should end

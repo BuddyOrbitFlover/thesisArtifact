@@ -1,0 +1,68 @@
+bug,wall_s,term,plaus,pl_patches,part_patches
+Cli_parser_1_1,,FL-attrition,-,0,0
+Commons_suncalc_1_1,18012,budget-censored (5h),no,0,0
+Commons_suncalc_2_1,18011,budget-censored (5h),no,0,0
+Dagger_core_13_1,18011,budget-censored (5h),yes,5,0
+Dagger_core_15_2,18011,budget-censored (5h),no,0,0
+Dagger_core_2_1,18011,budget-censored (5h),no,0,0
+Deft_1_1,18016,budget-censored (5h),no,0,0
+Hive_funnel_udf_1_1,2301,search exhausted/completed,no,0,0
+Iciql_2_1,18025,budget-censored (5h),no,0,11
+JacksonDatatypeJoda_2_1,1452,search exhausted/completed,no,0,0
+JacksonDatatypeJoda_2_2,1454,search exhausted/completed,no,0,0
+Javapoet_10_6,625,search exhausted/completed,no,0,0
+Javapoet_11_1,18009,budget-censored (5h),no,0,0
+Javapoet_11_2,18008,budget-censored (5h),no,0,0
+Jcabi_aether_1_1,1768,search exhausted/completed,yes,1,0
+Jcabi_aether_1_2,976,search exhausted/completed,yes,1,0
+Jcabi_http_11_2,18070,budget-censored (5h),no,0,0
+Jcabi_log_5_1,1674,search exhausted/completed,no,0,0
+Jcabi_log_5_2,1677,search exhausted/completed,no,0,0
+Jcabi_log_7_1,2246,search exhausted/completed,no,0,0
+Jcabi_log_7_2,1820,search exhausted/completed,no,0,0
+Jcabi_log_8_1,2632,search exhausted/completed,no,0,0
+Jcabi_matchers_1_1,28,search exhausted/completed,no,0,0
+Jchronic_1_1,,FL-attrition,-,0,0
+Johnzon_core_12_1,2348,search exhausted/completed,no,0,0
+Johnzon_core_5_1,1829,search exhausted/completed,no,0,0
+Markedj_3_2,18008,budget-censored (5h),no,0,0
+Netconf_java_1_1,27,search exhausted/completed,no,0,0
+Proj4J_3_1,18019,budget-censored (5h),no,0,0
+Proj4J_3_2,18020,budget-censored (5h),no,0,0
+Proj4J_5_1,18019,budget-censored (5h),no,0,0
+Proj4J_7_1,18055,budget-censored (5h),no,0,0
+RTree_8_1,32,search exhausted/completed,no,0,0
+RTree_8_2,32,search exhausted/completed,no,0,0
+RTree_8_3,32,search exhausted/completed,no,0,0
+Rdf4j_rio_turtle_9_1,1721,search exhausted/completed,no,0,0
+Rdf4j_rio_turtle_9_2,18042,budget-censored (5h),no,0,0
+Shiro_core_203_1,,FL-attrition,-,0,0
+Sparsebitset_2_1,18018,budget-censored (5h),no,0,0
+Spoon_16_1,,FL-attrition,-,0,0
+Spring_context_support_2_1,18049,budget-censored (5h),yes,1,0
+Tape_4_1,18010,budget-censored (5h),no,0,0
+Tascalate_concurrent_1_1,18022,budget-censored (5h),yes,2,0
+Tascalate_concurrent_2_1,18022,budget-censored (5h),yes,2,0
+Tika_core_25_1,18044,budget-censored (5h),no,0,1
+Tika_core_29_1,1897,search exhausted/completed,no,0,0
+Tika_core_32_2,18027,budget-censored (5h),no,0,0
+Tika_core_35_4,8253,search exhausted/completed,no,0,0
+Tika_core_37_1,1741,search exhausted/completed,no,0,0
+Trident_ml_1_2,603,search exhausted/completed,no,0,0
+Trident_ml_1_3,605,search exhausted/completed,no,0,0
+Validator_1_2,3181,search exhausted/completed,no,0,8
+Validator_24_1,29,search exhausted/completed,no,0,0
+Woodstox_2_1,18041,budget-censored (5h),no,0,0
+Woodstox_5_1,18042,budget-censored (5h),no,0,0
+Zip4j_20_1,18236,budget-censored (5h),no,0,0
+Zip4j_27_1,18086,budget-censored (5h),no,0,0
+Zip4j_28_1,18053,budget-censored (5h),no,0,0
+Zip4j_29_1,18040,budget-censored (5h),yes,1,0
+Zip4j_30_1,18041,budget-censored (5h),no,0,0
+Zip4j_32_1,18042,budget-censored (5h),no,0,0
+Zip4j_32_2,18043,budget-censored (5h),no,0,0
+Zip4j_35_1,,FL-attrition,-,0,0
+Zip4j_39_1,,FL-attrition,-,0,0
+Zip4j_44_1,,FL-attrition,-,0,0
+Zip4j_46_1,,FL-attrition,-,0,0
+Zip4j_47_1,,FL-attrition,-,0,0

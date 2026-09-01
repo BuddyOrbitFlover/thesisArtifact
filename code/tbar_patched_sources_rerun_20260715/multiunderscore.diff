@@ -1,0 +1,49 @@
+===== Main.java =====
+--- evidence/scripts/tbar_patched_sources_rerun_20260715/Main.java.premultiunderscore.bak	2026-07-24 16:38:45
++++ evidence/scripts/tbar_patched_sources_rerun_20260715/Main.java	2026-07-24 16:38:45
+@@ -37,10 +37,10 @@
+ 		String suspiciousFileStr = Configuration.suspPositionsFilePath;
+ 		
+ 		String[] elements = bugIdStr.split("_");
+-		String projectName = elements[0];
++		String projectName = String.join("_", java.util.Arrays.copyOf(elements, elements.length - 1)); // PATCH: multi-underscore project names
+ 		int bugId;
+ 		try {
+-			bugId = Integer.valueOf(elements[1]);
++			bugId = Integer.valueOf(elements[elements.length - 1]);
+ 		} catch (NumberFormatException e) {
+ 			System.err.println("Please input correct buggy project ID, such as \"Chart_1\".");
+ 			return;
+
+===== PathUtils.java =====
+--- evidence/scripts/tbar_patched_sources_rerun_20260715/PathUtils.java.premultiunderscore.bak	2026-07-24 16:38:45
++++ evidence/scripts/tbar_patched_sources_rerun_20260715/PathUtils.java	2026-07-24 16:38:45
+@@ -10,8 +10,8 @@
+ 	public static ArrayList<String> getSrcPath(String bugProject) {
+ 		ArrayList<String> path = new ArrayList<String>();
+ 		String[] words = bugProject.split("_");
+-		String projectName = words[0];
+-		int bugId = Integer.parseInt(words[1]);
++		String projectName = String.join("_", java.util.Arrays.copyOf(words, words.length - 1)); // PATCH: multi-underscore project names
++		int bugId = Integer.parseInt(words[words.length - 1]);
+ 		if (projectName.equals("Math")) {
+ 			if (bugId < 85) {
+ 				path.add("/target/classes/");
+
+===== runTBarForCatenaD4J.py =====
+--- evidence/scripts/tbar_patched_sources_rerun_20260715/runTBarForCatenaD4J.py.premultiunderscore.bak	2026-07-24 16:38:45
++++ evidence/scripts/tbar_patched_sources_rerun_20260715/runTBarForCatenaD4J.py	2026-07-24 16:38:45
+@@ -74,9 +74,9 @@
+         for i in range(start_index, end_index + 1):
+             sample_project = projects[i].replace('\n', '')
+             sample_project_ele = sample_project.split("_")
+-            project_name = sample_project_ele[0]
+-            bugid_num = sample_project_ele[1]
+-            cid_num = sample_project_ele[2]
++            project_name = "_".join(sample_project_ele[:-2])  # PATCH: multi-underscore project names
++            bugid_num = sample_project_ele[-2]
++            cid_num = sample_project_ele[-1]
+             print(sample_project)
+             print(project_name)
+             print(bugid_num)
+

@@ -1,0 +1,59 @@
+{
+    "original": {
+        "num_of_hunks": 2,
+        "0": {
+            "file_name": "jimfs/src/main/java/com/google/common/jimfs/Options.java",
+            "from_line_no": 99,
+            "to_line_no": 106,
+            "replaced_with": "    return addWrite(options);\n",
+            "replaced": "    if (options.contains(WRITE)) {\n      return ImmutableSet.copyOf(options);\n    } else {\n      return new ImmutableSet.Builder<OpenOption>()\n          .add(WRITE)\n          .addAll(options)\n          .build();\n    }\n",
+            "patch_type": "replace",
+            "next_line_no": 107
+        },
+        "1": {
+            "file_name": "jimfs/src/main/java/com/google/common/jimfs/Options.java",
+            "from_line_no": 138,
+            "to_line_no": 138,
+            "replaced_with": "    ImmutableSet<OpenOption> result = addWrite(Arrays.asList(options));\n",
+            "replaced": "    ImmutableSet<OpenOption> result = ImmutableSet.copyOf(options);\n",
+            "patch_type": "replace",
+            "next_line_no": 139
+        }
+    },
+    "method": {
+        "failing_tests": [
+            "com.google.common.jimfs.JimfsUnixLikeFileSystemTest::testOutputStream_withTruncateExistingAndNotWrite_truncatesFile"
+        ],
+        "com.google.common.jimfs.JimfsUnixLikeFileSystemTest::testOutputStream_withTruncateExistingAndNotWrite_truncatesFile": {
+            "file_path": "src/test/java/com/google/common/jimfs/JimfsUnixLikeFileSystemTest.java",
+            "check": [
+                "Use pattern matching: .assertThatPath",
+                "Use pattern matching: .assertThatPath"
+            ],
+            "Instance": "Begin: Pos(1385, 3)\nEnd: Pos(1397, 3)\nSource: /tmp/Jimfs_2/src/test/java//com/google/common/jimfs/JimfsUnixLikeFileSystemTest.java\nName: testOutputStream_withTruncateExistingAndNotWrite_truncatesFile\nChilds: [StatementAssertion<Begin: Pos(1390, 5), End: Pos(1390, 48)>,\nStatementAssertion<Begin: Pos(1396, 5), End: Pos(1396, 45)>,\n]",
+            "source": "/tmp/Jimfs_2/src/test/java//com/google/common/jimfs/JimfsUnixLikeFileSystemTest.java",
+            "name": "testOutputStream_withTruncateExistingAndNotWrite_truncatesFile",
+            "begin": "Pos(1385, 3)",
+            "end": "Pos(1397, 3)",
+            "begin_line_no": 1385,
+            "end_line_no": 1397,
+            "child": [
+                "Begin: Pos(1390, 5)\nEnd: Pos(1390, 48)\nSource: StatementExpression\nName: <Unknown>\nChilds: []",
+                "Begin: Pos(1396, 5)\nEnd: Pos(1396, 45)\nSource: StatementExpression\nName: <Unknown>\nChilds: []"
+            ],
+            "splited": [
+                "  @Test\n  public void testOutputStream_withTruncateExistingAndNotWrite_truncatesFile$catena_0() throws IOException {\n    // https://github.com/google/jimfs/pull/77\n    Path path = path(\"/test\");\n    Files.write(path, new byte[] {1, 2, 3});\n    assertThatPath(path).containsBytes(1, 2, 3);                                                            /***** ORIGINAL ASSERTION IS HERE *****/\n\n    try (OutputStream out = Files.newOutputStream(path, CREATE, TRUNCATE_EXISTING)) {\n      out.write(new byte[] {1, 2});\n    }\n\n    try{ assertThatPath(path).containsBytes(1, 2);                                                          }catch(Throwable __SHOULD_BE_IGNORED){}\n  }",
+                "  @Test\n  public void testOutputStream_withTruncateExistingAndNotWrite_truncatesFile$catena_1() throws IOException {\n    // https://github.com/google/jimfs/pull/77\n    Path path = path(\"/test\");\n    Files.write(path, new byte[] {1, 2, 3});\n    try{ assertThatPath(path).containsBytes(1, 2, 3);                                                       }catch(Throwable __SHOULD_BE_IGNORED){}\n\n    try (OutputStream out = Files.newOutputStream(path, CREATE, TRUNCATE_EXISTING)) {\n      out.write(new byte[] {1, 2});\n    }\n\n    assertThatPath(path).containsBytes(1, 2);                                                               /***** ORIGINAL ASSERTION IS HERE *****/\n  }"
+            ],
+            "func": {
+                "0": "  @Test\n  public void testOutputStream_withTruncateExistingAndNotWrite_truncatesFile$catena_0() throws IOException {\n    // https://github.com/google/jimfs/pull/77\n    Path path = path(\"/test\");\n    Files.write(path, new byte[] {1, 2, 3});\n    assertThatPath(path).containsBytes(1, 2, 3);                                                            /***** ORIGINAL ASSERTION IS HERE *****/\n\n    try (OutputStream out = Files.newOutputStream(path, CREATE, TRUNCATE_EXISTING)) {\n      out.write(new byte[] {1, 2});\n    }\n\n    try{ assertThatPath(path).containsBytes(1, 2);                                                          }catch(Throwable __SHOULD_BE_IGNORED){}\n  }",
+                "1": "  @Test\n  public void testOutputStream_withTruncateExistingAndNotWrite_truncatesFile$catena_1() throws IOException {\n    // https://github.com/google/jimfs/pull/77\n    Path path = path(\"/test\");\n    Files.write(path, new byte[] {1, 2, 3});\n    try{ assertThatPath(path).containsBytes(1, 2, 3);                                                       }catch(Throwable __SHOULD_BE_IGNORED){}\n\n    try (OutputStream out = Files.newOutputStream(path, CREATE, TRUNCATE_EXISTING)) {\n      out.write(new byte[] {1, 2});\n    }\n\n    assertThatPath(path).containsBytes(1, 2);                                                               /***** ORIGINAL ASSERTION IS HERE *****/\n  }"
+            }
+        }
+    },
+    "01": {
+        "failing_tests": [
+            "com.google.common.jimfs.JimfsUnixLikeFileSystemTest::testOutputStream_withTruncateExistingAndNotWrite_truncatesFile$catena_1"
+        ]
+    }
+}

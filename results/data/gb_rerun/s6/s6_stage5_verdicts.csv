@@ -1,0 +1,64 @@
+bug,verdict,note,nh,pats
+Collections_31,indivisible,,2,1
+Collections_35,indivisible,,2,1
+Compress_52,unknown,exception tests-timeout,,
+Compress_53,unknown,exception,,
+Gson_3,indivisible,,2,1
+Gson_5,divisible,,2,1
+Gson_6,divisible,,2,2
+Gson_7,indivisible,,2,1
+Gson_8,indivisible,,2,1
+Gson_9,divisible,,2,1
+Gson_10,divisible,,3,1
+Gson_11,indivisible,,3,1
+Gson_12,indivisible,,2,1
+Gson_13,divisible,+exc post-verdict,15,1
+Gson_14,indivisible,,2,1
+Gson_15,indivisible,,3,1
+Gson_16,unknown,exception file-not-found module path,,
+Gson_17,divisible,,5,1
+Gson_19,divisible,,2,2
+Gson_20,divisible,,3,1
+Gson_21,unknown,exception generator-timeout,,
+Gson_22,unknown,exception,,
+Gson_23,divisible,,2,2
+Gson_24,divisible,+exc post-verdict,11,1
+Gson_25,indivisible,,5,0
+JacksonCore_31,divisible,,3,2
+JacksonDatabind_122,unknown,exception task-should-end,,
+JacksonDatabind_124,divisible,+exc post-verdict,2,1
+JacksonDatabind_126,divisible,,7,1
+JacksonDatabind_128,unknown,exception task-should-end,,
+JacksonDatabind_129,divisible,,2,1
+JacksonDatabind_131,indivisible,,2,1
+JacksonDatabind_133,indivisible,,3,1
+JacksonDatabind_135,divisible,,3,2
+JacksonDatabind_137,indivisible,,2,1
+JacksonDatabind_142,divisible,,3,1
+JacksonDatabind_145,divisible,,2,1
+JacksonDatabind_148,indivisible,,2,1
+JacksonDatabind_154,divisible,,2,1
+JacksonDatabind_155,divisible,,2,1
+Lang_81,divisible,,3,2
+Lang_82,indivisible,,2,1
+Lang_83,divisible,,2,2
+Math_3,unknown,exception task-should-end,,
+Math_8,unknown,exception,,
+Math_10,unknown,exception,,
+Math_12,unknown,exception,,
+Math_15,unknown,exception,,
+Math_16,unknown,exception,,
+Math_18,unknown,exception,,
+Math_21,unknown,exception task-should-end,,
+Math_22,unknown,exception,,
+Math_23,unknown,exception,,
+Math_24,unknown,exception,,
+Math_25,unknown,exception,,
+Math_26,unknown,exception,,
+Math_27,unknown,exception,,
+Math_30,unknown,exception,,
+Math_31,unknown,exception,,
+Math_32,unknown,exception,,
+Math_33,unknown,exception,,
+Math_34,unknown,exception,,
+Math_35,unknown,exception tests-timeout,,

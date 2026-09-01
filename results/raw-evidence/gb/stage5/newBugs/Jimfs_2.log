@@ -1,0 +1,129 @@
+---
+Begin generate bug_id: Jimfs_2
+num_of_hunks: 2
+timeout for running: 3600
+use working dir: ./working/data/Jimfs_2
+Try to checkout Jimfs_2
+build dir: ['target/classes', 'target/test-classes']
+init FileManager
+trace file: jimfs/src/main/java/com/google/common/jimfs/Options.java
+trying to replace old failing tests
+edit: replace from 1385 range 13 at src/test/java/com/google/common/jimfs/JimfsUnixLikeFileSystemTest.java
+to
+  @Test
+  public void testOutputStream_withTruncateExistingAndNotWrite_truncatesFile$catena_0() throws IOException {
+    // https://github.com/google/jimfs/pull/77
+    Path path = path("/test");
+    Files.write(path, new byte[] {1, 2, 3});
+    assertThatPath(path).containsBytes(1, 2, 3);                                                            /***** ORIGINAL ASSERTION IS HERE *****/
+
+    try (OutputStream out = Files.newOutputStream(path, CREATE, TRUNCATE_EXISTING)) {
+      out.write(new byte[] {1, 2});
+    }
+
+    try{ assertThatPath(path).containsBytes(1, 2);                                                          }catch(Throwable __SHOULD_BE_IGNORED){}
+  }   @Test
+  public void testOutputStream_withTruncateExistingAndNotWrite_truncatesFile$catena_1() throws IOException {
+    // https://github.com/google/jimfs/pull/77
+    Path path = path("/test");
+    Files.write(path, new byte[] {1, 2, 3});
+    try{ assertThatPath(path).containsBytes(1, 2, 3);                                                       }catch(Throwable __SHOULD_BE_IGNORED){}
+
+    try (OutputStream out = Files.newOutputStream(path, CREATE, TRUNCATE_EXISTING)) {
+      out.write(new byte[] {1, 2});
+    }
+
+    assertThatPath(path).containsBytes(1, 2);                                                               /***** ORIGINAL ASSERTION IS HERE *****/
+  }
+trace file: src/test/java/com/google/common/jimfs/JimfsUnixLikeFileSystemTest.java
+new test num: 2
+ori test num: 0
+pattern: 00
+patches are written to file
+running tests...
+used time: Finished in 20.99 seconds
+Failing tests: 10
+	com.google.common.jimfs.JimfsFileSystemCloseTest::testIsNotAvailableFromProvider
+	com.google.common.jimfs.JimfsUnixLikeFileSystemTest::testPaths_getFromUri
+	com.google.common.jimfs.JimfsUnixLikeFileSystemTest::testOutputStream_withTruncateExistingAndNotWrite_truncatesFile$catena_1
+	com.google.common.jimfs.JimfsWindowsLikeFileSystemTest::testPaths_getFromUri
+	com.google.common.jimfs.JimfsWindowsLikeFileSystemTest::testPaths_getFromUri_unc
+	com.google.common.jimfs.UrlTest::readFromUrl
+	com.google.common.jimfs.UrlTest::readDirectoryContents
+	com.google.common.jimfs.UrlTest::contentType
+	com.google.common.jimfs.UrlTest::headers
+	com.google.common.jimfs.UrlTest::creatUrl
+EXCEPTION: Raising new failing tests before fixing, should check
+processed: 00
+pattern: 01
+try to fix hunk: 1
+replace from 138 with range 1 to
+    ImmutableSet<OpenOption> result = addWrite(Arrays.asList(options));
+
+patches are written to file
+running tests...
+used time: Finished in 21.24 seconds
+Failing tests: 9
+	com.google.common.jimfs.JimfsFileSystemCloseTest::testIsNotAvailableFromProvider
+	com.google.common.jimfs.JimfsUnixLikeFileSystemTest::testPaths_getFromUri
+	com.google.common.jimfs.JimfsWindowsLikeFileSystemTest::testPaths_getFromUri
+	com.google.common.jimfs.JimfsWindowsLikeFileSystemTest::testPaths_getFromUri_unc
+	com.google.common.jimfs.UrlTest::readFromUrl
+	com.google.common.jimfs.UrlTest::readDirectoryContents
+	com.google.common.jimfs.UrlTest::contentType
+	com.google.common.jimfs.UrlTest::headers
+	com.google.common.jimfs.UrlTest::creatUrl
+select new bug
+Pattern: 01
+new failing tests:
+com.google.common.jimfs.JimfsUnixLikeFileSystemTest::testOutputStream_withTruncateExistingAndNotWrite_truncatesFile$catena_1
+Save found bug
+processed: 01
+pattern: 10
+try to fix hunk: 0
+replace from 99 with range 8 to
+    return addWrite(options);
+
+patches are written to file
+running tests...
+used time: Finished in 22.47 seconds
+Failing tests: 10
+	com.google.common.jimfs.JimfsFileSystemCloseTest::testIsNotAvailableFromProvider
+	com.google.common.jimfs.JimfsUnixLikeFileSystemTest::testPaths_getFromUri
+	com.google.common.jimfs.JimfsUnixLikeFileSystemTest::testOutputStream_withTruncateExistingAndNotWrite_truncatesFile$catena_1
+	com.google.common.jimfs.JimfsWindowsLikeFileSystemTest::testPaths_getFromUri
+	com.google.common.jimfs.JimfsWindowsLikeFileSystemTest::testPaths_getFromUri_unc
+	com.google.common.jimfs.UrlTest::readFromUrl
+	com.google.common.jimfs.UrlTest::readDirectoryContents
+	com.google.common.jimfs.UrlTest::contentType
+	com.google.common.jimfs.UrlTest::headers
+	com.google.common.jimfs.UrlTest::creatUrl
+No new failing tests but only 1 hunk
+processed: 10
+pattern: 11
+try to fix hunk: 0
+replace from 99 with range 8 to
+    return addWrite(options);
+
+try to fix hunk: 1
+replace from 138 with range 1 to
+    ImmutableSet<OpenOption> result = addWrite(Arrays.asList(options));
+
+patches are written to file
+running tests...
+used time: Finished in 23.68 seconds
+Failing tests: 9
+	com.google.common.jimfs.JimfsFileSystemCloseTest::testIsNotAvailableFromProvider
+	com.google.common.jimfs.JimfsUnixLikeFileSystemTest::testPaths_getFromUri
+	com.google.common.jimfs.JimfsWindowsLikeFileSystemTest::testPaths_getFromUri
+	com.google.common.jimfs.JimfsWindowsLikeFileSystemTest::testPaths_getFromUri_unc
+	com.google.common.jimfs.UrlTest::readFromUrl
+	com.google.common.jimfs.UrlTest::readDirectoryContents
+	com.google.common.jimfs.UrlTest::contentType
+	com.google.common.jimfs.UrlTest::headers
+	com.google.common.jimfs.UrlTest::creatUrl
+EXCEPTION: Could not pass after all fixed, should check
+Can independently fix []
+Could not fix independently
+processed: 11
+Find 1 new bugs

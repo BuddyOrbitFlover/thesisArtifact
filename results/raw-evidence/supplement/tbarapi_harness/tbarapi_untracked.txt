@@ -1,0 +1,39 @@
+ M 105_bugs_list.txt
+ M BugPositions.txt
+ M C4J_location/105SampleBugsResult/Chart_18_2/ochiai.ranking.txt
+ D D4J/projects/Chart_8.zip
+ D D4J/projects/README.md
+ M FailedTestCases/Chart_18.txt
+ M FailedTestCases/Time_26.txt
+ M NormalFLTBarRunner.sh
+ M PFL_Fixer.sh
+ M PerfectFLTBarRunner.sh
+ M README.md
+ M SuspiciousCodePositions/Chart_18/Ochiai.txt
+ M SuspiciousCodePositions/Time_26/Ochiai.txt
+ M checkoutD4JBugs.sh
+ M gzoltar_analyzer.py
+ M installD4J.sh
+ M pom.xml
+ M runTBarForCatenaD4J.py
+ M test.txt
+?? .temp/
+?? RESULTS/
+?? RESULTS_5h/
+?? RESULTS_rem/
+?? __pycache__/gzoltar_analyzer.cpython-312.pyc
+?? __pycache__/gzoltar_analyzer.cpython-38.pyc
+?? chunk_rem_00
+?? chunk_rem_01
+?? chunk_rem_02
+?? chunk_rem_03
+?? logs/
+?? my_bugs_list.txt
+?? patch_review.txt
+?? reaper.sh
+?? remaining_bugs_list.txt
+?? retry40.txt
+?? run_worker.sh
+?? run_worker_5h.sh
+?? run_worker_rem.sh
+?? tbar_44_run.log

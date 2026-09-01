@@ -1,0 +1,14 @@
+Johnzon_core_4_1
+Johnzon_core_4_2
+AaltoXml_9_2
+Woodstox_6_1
+Jcabi_log_4_1
+Jcabi_log_4_2
+Dagger_core_3_1
+Dagger_core_3_2
+Dagger_core_17_1
+Google_java_format_core_1_2
+RTree_4_1
+Proj4J_6_3
+Proj4J_6_4
+Disklrucache_2_1

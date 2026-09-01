@@ -1,0 +1,3 @@
+org.apache.commons.text.WordUtils@493
+org.apache.commons.text.WordUtils@494
+org.apache.commons.text.WordUtils@495
